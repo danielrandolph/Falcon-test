@@ -53,7 +53,15 @@ export function AppSidebar() {
       <div className="flex h-full flex-col">
         {/* Logo */}
         <div className="flex h-14 items-center justify-between px-4">
-          <span className="text-lg font-semibold text-neutral-800">AgVend</span>
+          <Link href="/" aria-label="AgVend home">
+            <img
+              src="/agvend-logo.svg"
+              alt="AgVend"
+              width={76}
+              height={16}
+              className="block"
+            />
+          </Link>
           <Button variant="quiet" className="h-8 w-8 px-0">
             <PanelLeftClose className="h-4 w-4" />
           </Button>
