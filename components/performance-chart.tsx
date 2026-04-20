@@ -1,7 +1,7 @@
 "use client";
 
 import { ArrowRight } from "lucide-react";
-import { useState } from "react";
+import { ToggleButton, ToggleButtonGroup } from "../falcon-ui-kit/dist/index.js";
 
 const chartData = [
   { month: "Jan", value: 65 },
@@ -13,50 +13,35 @@ const chartData = [
 ];
 
 export function PerformanceChart() {
-  const [activeTab, setActiveTab] = useState<"crop" | "clients">("crop");
   const maxValue = Math.max(...chartData.map((d) => d.value));
 
   return (
-    <div className="rounded-lg border border-[#dee3e5] bg-white p-4">
-      <div className="mb-4 flex items-center justify-between">
-        <div className="flex items-center gap-2">
-          <h3 className="font-semibold text-[#111111]">My Performance</h3>
-          <ArrowRight className="h-4 w-4 text-[#6f7578]" />
+    <div className="tw:rounded-lg tw:border tw:border-neutral-200 tw:bg-white tw:p-4 tw:font-sans">
+      <div className="tw:mb-4 tw:flex tw:items-center tw:justify-between">
+        <div className="tw:flex tw:items-center tw:gap-2">
+          <h3 className="tw:font-semibold tw:text-neutral-900">My Performance</h3>
+          <ArrowRight className="tw:h-4 tw:w-4 tw:text-neutral-500" />
         </div>
-        <div className="flex rounded-md border border-[#dee3e5] bg-white p-0.5">
-          <button
-            onClick={() => setActiveTab("crop")}
-            className={`rounded px-3 py-1 text-xs font-medium transition-colors ${
-              activeTab === "crop"
-                ? "bg-[#f0f1f2] text-[#111111]"
-                : "text-[#6f7578] hover:text-[#404547]"
-            }`}
-          >
+        <ToggleButtonGroup selectionMode="single" defaultSelectedKeys={["crop"]}>
+          <ToggleButton id="crop" className="tw:h-7 tw:text-xs tw:px-3">
             Crop Year
-          </button>
-          <button
-            onClick={() => setActiveTab("clients")}
-            className={`rounded px-3 py-1 text-xs font-medium transition-colors ${
-              activeTab === "clients"
-                ? "bg-[#f0f1f2] text-[#111111]"
-                : "text-[#6f7578] hover:text-[#404547]"
-            }`}
-          >
+          </ToggleButton>
+          <ToggleButton id="clients" className="tw:h-7 tw:text-xs tw:px-3">
             Clients
-          </button>
-        </div>
+          </ToggleButton>
+        </ToggleButtonGroup>
       </div>
 
       {/* Chart */}
-      <div className="mt-6">
-        <div className="flex h-40 items-end justify-between gap-2">
+      <div className="tw:mt-6">
+        <div className="tw:flex tw:h-40 tw:items-end tw:justify-between tw:gap-2">
           {chartData.map((data, index) => (
-            <div key={index} className="flex flex-1 flex-col items-center gap-2">
+            <div key={index} className="tw:flex tw:flex-1 tw:flex-col tw:items-center tw:gap-2">
               <div
-                className="w-full max-w-10 rounded-t bg-[#b2cce5] transition-all hover:bg-[#6b9dc5]"
+                className="tw:w-full tw:max-w-10 tw:rounded-t tw:bg-blue-200 tw:transition-all tw:hover:bg-blue-400"
                 style={{ height: `${(data.value / maxValue) * 100}%` }}
               />
-              <span className="text-xs text-[#6f7578]">{data.month}</span>
+              <span className="tw:text-xs tw:text-neutral-500">{data.month}</span>
             </div>
           ))}
         </div>

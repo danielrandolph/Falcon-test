@@ -14,6 +14,7 @@ import {
   PanelLeftClose,
   Palette,
 } from "lucide-react";
+import { Button, Separator } from "../falcon-ui-kit/dist/index.js";
 
 const navSections = [
   {
@@ -48,26 +49,28 @@ export function AppSidebar() {
   const pathname = usePathname();
 
   return (
-    <aside className="fixed left-0 top-0 z-40 h-screen w-56 border-r border-[#dee3e5] bg-white">
-      <div className="flex h-full flex-col">
+    <aside className="tw:fixed tw:left-0 tw:top-0 tw:z-40 tw:h-screen tw:w-56 tw:border-r tw:border-neutral-200 tw:bg-white tw:font-sans">
+      <div className="tw:flex tw:h-full tw:flex-col">
         {/* Logo */}
-        <div className="flex h-14 items-center justify-between border-b border-[#dee3e5] px-4">
-          <span className="text-lg font-semibold text-[#2d3e4f]">AgVend</span>
-          <button className="rounded p-1 text-[#6f7578] hover:bg-[#f0f1f2]">
-            <PanelLeftClose className="h-4 w-4" />
-          </button>
+        <div className="tw:flex tw:h-14 tw:items-center tw:justify-between tw:px-4">
+          <span className="tw:text-lg tw:font-semibold tw:text-neutral-800">AgVend</span>
+          <Button variant="quiet" className="tw:h-8 tw:w-8 tw:px-0">
+            <PanelLeftClose className="tw:h-4 tw:w-4" />
+          </Button>
         </div>
+        
+        <Separator />
 
         {/* Navigation */}
-        <nav className="flex-1 overflow-y-auto px-3 py-4">
+        <nav className="tw:flex-1 tw:overflow-y-auto tw:px-3 tw:py-4">
           {navSections.map((section, sectionIndex) => (
-            <div key={sectionIndex} className="mb-4">
+            <div key={sectionIndex} className="tw:mb-4">
               {section.label && (
-                <div className="mb-2 px-2 text-xs font-medium uppercase tracking-wider text-[#6f7578]">
+                <div className="tw:mb-2 tw:px-2 tw:text-xs tw:font-medium tw:uppercase tw:tracking-wider tw:text-neutral-500">
                   {section.label}
                 </div>
               )}
-              <ul className="space-y-0.5">
+              <ul className="tw:space-y-0.5">
                 {section.items.map((item) => {
                   const Icon = item.icon;
                   const isActive = pathname === item.href;
@@ -76,13 +79,13 @@ export function AppSidebar() {
                     <li key={item.name}>
                       <Link
                         href={item.href}
-                        className={`flex items-center gap-2 rounded-md px-2 py-1.5 text-sm transition-colors ${
+                        className={`tw:flex tw:items-center tw:gap-2 tw:rounded-lg tw:px-2 tw:py-1.5 tw:text-sm tw:transition-colors ${
                           isActive || item.isActive
-                            ? "bg-[#f0f1f2] text-[#2d3e4f] font-medium"
-                            : "text-[#404547] hover:bg-[#f0f1f2]"
+                            ? "tw:bg-neutral-100 tw:text-neutral-800 tw:font-medium"
+                            : "tw:text-neutral-600 tw:hover:bg-neutral-50"
                         }`}
                       >
-                        <Icon className="h-4 w-4" />
+                        <Icon className="tw:h-4 tw:w-4" />
                         {item.name}
                       </Link>
                     </li>
@@ -93,21 +96,21 @@ export function AppSidebar() {
           ))}
 
           {/* Chats Section */}
-          <div className="mb-4">
-            <div className="mb-2 px-2 text-xs font-medium uppercase tracking-wider text-[#6f7578]">
+          <div className="tw:mb-4">
+            <div className="tw:mb-2 tw:px-2 tw:text-xs tw:font-medium tw:uppercase tw:tracking-wider tw:text-neutral-500">
               Chats
             </div>
-            <ul className="space-y-0.5">
+            <ul className="tw:space-y-0.5">
               {chatItems.map((item, index) => {
                 const Icon = item.icon;
                 return (
                   <li key={index}>
                     <Link
                       href={item.href}
-                      className="flex items-center gap-2 rounded-md px-2 py-1.5 text-sm text-[#404547] transition-colors hover:bg-[#f0f1f2]"
+                      className="tw:flex tw:items-center tw:gap-2 tw:rounded-lg tw:px-2 tw:py-1.5 tw:text-sm tw:text-neutral-600 tw:transition-colors tw:hover:bg-neutral-50"
                     >
-                      <Icon className="h-4 w-4" />
-                      <span className="truncate">{item.name}</span>
+                      <Icon className="tw:h-4 tw:w-4" />
+                      <span className="tw:truncate">{item.name}</span>
                     </Link>
                   </li>
                 );
@@ -116,13 +119,15 @@ export function AppSidebar() {
           </div>
         </nav>
 
+        <Separator />
+
         {/* Design System Link */}
-        <div className="border-t border-[#dee3e5] p-3">
+        <div className="tw:p-3">
           <Link
             href="/design-system"
-            className="flex items-center gap-2 rounded-md px-2 py-1.5 text-sm text-[#6f7578] transition-colors hover:bg-[#f0f1f2] hover:text-[#404547]"
+            className="tw:flex tw:items-center tw:gap-2 tw:rounded-lg tw:px-2 tw:py-1.5 tw:text-sm tw:text-neutral-500 tw:transition-colors tw:hover:bg-neutral-50 tw:hover:text-neutral-700"
           >
-            <Palette className="h-4 w-4" />
+            <Palette className="tw:h-4 tw:w-4" />
             <span>Design System</span>
           </Link>
         </div>

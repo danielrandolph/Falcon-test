@@ -6,8 +6,18 @@ import { StatCard } from "@/components/stat-card";
 import { SpotlightSection } from "@/components/spotlight-section";
 import { PerformanceChart } from "@/components/performance-chart";
 import { Leaderboard } from "@/components/leaderboard";
-import { FileText, ShoppingCart, Users, ChevronDown, Settings } from "lucide-react";
-import { Tabs, TabList, Tab, TabPanel } from "../falcon-ui-kit/dist/index.js";
+import { FileText, ShoppingCart, Users, Settings } from "lucide-react";
+import { 
+  Tabs, 
+  TabList, 
+  Tab, 
+  TabPanel, 
+  Button,
+  Disclosure,
+  DisclosureHeader,
+  DisclosurePanel 
+} from "../falcon-ui-kit/dist/index.js";
+import { DisclosureGroup } from "react-aria-components";
 
 const spotlightItems = [
   { name: "Julia Tkachenko", href: "/clients/1", count: 2 },
@@ -86,22 +96,22 @@ const actionsLeaderboard = [
 
 export default function Dashboard() {
   return (
-    <div className="min-h-screen bg-white">
+    <div className="tw:min-h-screen tw:bg-white tw:font-sans">
       <AppSidebar />
-      <div className="pl-56">
+      <div className="tw:pl-56">
         <DashboardHeader />
-        <main className="p-6">
+        <main className="tw:p-6">
           {/* Tabs */}
-          <div className="mb-6">
+          <div className="tw:mb-6">
             <Tabs defaultSelectedKey="agronomy">
-              <TabList className="!bg-[#f0f1f2] !rounded-lg !p-1 !w-fit">
-                <Tab id="agronomy" className="!text-[#111111]">Agronomy</Tab>
-                <Tab id="grain" className="!text-[#111111]">Grain</Tab>
-                <Tab id="energy" className="!text-[#111111]">Energy</Tab>
+              <TabList className="tw:bg-neutral-100 tw:rounded-lg tw:p-1 tw:w-fit">
+                <Tab id="agronomy">Agronomy</Tab>
+                <Tab id="grain">Grain</Tab>
+                <Tab id="energy">Energy</Tab>
               </TabList>
-              <TabPanel id="agronomy">
+              <TabPanel id="agronomy" className="tw:p-0">
                 {/* Stats Row */}
-                <div className="mt-6 grid gap-4 md:grid-cols-3">
+                <div className="tw:mt-6 tw:grid tw:gap-4 md:tw:grid-cols-3">
                   <StatCard
                     title="Quotes"
                     value="11,189"
@@ -132,26 +142,32 @@ export default function Dashboard() {
                 </div>
 
                 {/* My Reports Collapsible */}
-                <div className="mt-6 rounded-lg border border-[#dee3e5] bg-white">
-                  <button className="flex w-full items-center justify-between p-4">
-                    <div className="flex items-center gap-2">
-                      <ChevronDown className="h-4 w-4 text-[#6f7578]" />
-                      <span className="font-medium text-[#111111]">My Reports</span>
-                    </div>
-                    <button className="rounded p-1 text-[#6f7578] hover:bg-[#f0f1f2]">
-                      <Settings className="h-4 w-4" />
-                    </button>
-                  </button>
+                <div className="tw:mt-6">
+                  <DisclosureGroup>
+                    <Disclosure id="reports" className="tw:rounded-lg tw:border tw:border-neutral-200 tw:bg-white">
+                      <div className="tw:flex tw:items-center tw:justify-between tw:pr-2">
+                        <DisclosureHeader>My Reports</DisclosureHeader>
+                        <Button variant="quiet" className="tw:h-8 tw:w-8 tw:px-0">
+                          <Settings className="tw:h-4 tw:w-4" />
+                        </Button>
+                      </div>
+                      <DisclosurePanel>
+                        <div className="tw:text-sm tw:text-neutral-500">
+                          Your saved reports will appear here.
+                        </div>
+                      </DisclosurePanel>
+                    </Disclosure>
+                  </DisclosureGroup>
                 </div>
 
                 {/* Spotlight & Performance Row */}
-                <div className="mt-6 grid gap-4 lg:grid-cols-2">
+                <div className="tw:mt-6 tw:grid tw:gap-4 lg:tw:grid-cols-2">
                   <SpotlightSection items={spotlightItems} />
                   <PerformanceChart />
                 </div>
 
                 {/* Leaderboards Row */}
-                <div className="mt-6 grid gap-4 lg:grid-cols-2">
+                <div className="tw:mt-6 tw:grid tw:gap-4 lg:tw:grid-cols-2">
                   <Leaderboard
                     title="Leaderboard - Performance"
                     period="Current Crop Year"
@@ -164,13 +180,13 @@ export default function Dashboard() {
                   />
                 </div>
               </TabPanel>
-              <TabPanel id="grain">
-                <div className="mt-6 text-center py-12 text-[#6f7578]">
+              <TabPanel id="grain" className="tw:p-0">
+                <div className="tw:mt-6 tw:text-center tw:py-12 tw:text-neutral-500">
                   Grain dashboard content coming soon...
                 </div>
               </TabPanel>
-              <TabPanel id="energy">
-                <div className="mt-6 text-center py-12 text-[#6f7578]">
+              <TabPanel id="energy" className="tw:p-0">
+                <div className="tw:mt-6 tw:text-center tw:py-12 tw:text-neutral-500">
                   Energy dashboard content coming soon...
                 </div>
               </TabPanel>

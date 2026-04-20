@@ -1,22 +1,23 @@
 "use client";
 
 import { HelpCircle } from "lucide-react";
+import { Button } from "../falcon-ui-kit/dist/index.js";
 
 export function DashboardHeader() {
   return (
-    <header className="flex h-14 items-center justify-between border-b border-[#dee3e5] bg-white px-6">
-      <h1 className="text-lg font-semibold text-[#111111]">Dashboard</h1>
-      <div className="flex items-center gap-3">
-        <div className="h-8 w-8 overflow-hidden rounded-full bg-[#dee3e5]">
-          <img
-            src="/placeholder.svg?height=32&width=32&query=user avatar professional"
-            alt="User avatar"
-            className="h-full w-full object-cover"
+    <header className="tw:flex tw:h-14 tw:items-center tw:justify-between tw:border-b tw:border-neutral-200 tw:bg-white tw:px-6 tw:font-sans">
+      <h1 className="tw:text-lg tw:font-semibold tw:text-neutral-800">Dashboard</h1>
+      <div className="tw:flex tw:items-center tw:gap-3">
+        <div className="tw:h-8 tw:w-8 tw:rounded-full tw:bg-neutral-200 tw:overflow-hidden">
+          <img 
+            src="https://api.dicebear.com/7.x/avataaars/svg?seed=user" 
+            alt="User avatar" 
+            className="tw:h-full tw:w-full tw:object-cover"
           />
         </div>
-        <button className="rounded p-1 text-[#6f7578] hover:bg-[#f0f1f2]">
-          <HelpCircle className="h-5 w-5" />
-        </button>
+        <Button variant="quiet" className="tw:h-8 tw:w-8 tw:px-0">
+          <HelpCircle className="tw:h-4 tw:w-4" />
+        </Button>
       </div>
     </header>
   );
