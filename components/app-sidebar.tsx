@@ -49,7 +49,7 @@ export function AppSidebar() {
   const pathname = usePathname();
 
   return (
-    <aside className="fixed left-0 top-0 z-40 h-screen w-56 border-r border-neutral-200 bg-white font-sans">
+    <aside className="fixed left-0 top-0 z-40 h-screen w-56 border-r border-neutral-200 bg-slate-100 font-sans" style={{ backgroundColor: "#F0F1F2" }}>
       <div className="flex h-full flex-col">
         {/* Logo */}
         <div className="flex h-14 items-center justify-between px-4">
