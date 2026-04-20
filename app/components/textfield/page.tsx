@@ -3,7 +3,7 @@
 import { DocsLayout } from "@/components/docs-layout";
 import { ComponentPreview } from "@/components/component-preview";
 import { PropsTable } from "@/components/props-table";
-import { TextField, TextArea } from "../../../falcon-ui-kit/dist/index.js";
+import { TextField } from "../../../falcon-ui-kit/dist/index.js";
 
 const textFieldProps = [
   { name: "label", type: "string", description: "The label for the text field" },
@@ -79,11 +79,13 @@ export default function TextFieldPage() {
       </ComponentPreview>
 
       <ComponentPreview
-        title="TextArea"
-        description="Multi-line text input"
-        code={`<TextArea label="Description" placeholder="Enter a description..." />`}
+        title="Input Types"
+        description="Different input types for various data"
+        code={`<TextField label="Password" type="password" placeholder="Enter password" />
+<TextField label="Email" type="email" placeholder="Enter email" />`}
       >
-        <TextArea label="Description" placeholder="Enter a description..." />
+        <TextField label="Password" type="password" placeholder="Enter password" />
+        <TextField label="Email" type="email" placeholder="Enter email" />
       </ComponentPreview>
 
       <h2 className="mb-4 mt-12 text-2xl font-semibold text-foreground">Props</h2>
