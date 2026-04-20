@@ -14,7 +14,7 @@ const jetbrainsMono = JetBrains_Mono({
 
 export const metadata: Metadata = {
   title: "Falcon UI - Design System",
-  description: "Component documentation and design system for Falcon UI Kit",
+  description: "Interactive documentation for the Falcon UI Kit component library",
 };
 
 export const viewport: Viewport = {

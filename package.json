@@ -8,7 +8,6 @@
     "start": "next start"
   },
   "dependencies": {
-    "@falcon/ui-kit": "file:./package",
     "@tailwindcss/postcss": "^4.2.2",
     "@types/node": "^22.0.0",
     "@types/react": "^18.3.0",
