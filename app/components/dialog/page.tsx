@@ -13,7 +13,7 @@ const dialogProps = [
 const alertDialogProps = [
   { name: "title", type: "string", description: "The title of the alert dialog" },
   { name: "children", type: "ReactNode", description: "The content/message of the alert dialog" },
-  { name: "variant", type: '"info" | "warning" | "destructive"', default: '"info"', description: "The visual variant" },
+  { name: "variant", type: '"info" | "destructive"', default: '"info"', description: "The visual variant" },
   { name: "actionLabel", type: "string", description: "The label for the action button" },
   { name: "cancelLabel", type: "string", default: '"Cancel"', description: "The label for the cancel button" },
   { name: "onAction", type: "() => void", description: "Handler called when the action button is pressed" },
@@ -92,27 +92,27 @@ export default function DialogPage() {
       </ComponentPreview>
 
       <ComponentPreview
-        title="Warning Dialog"
-        description="Warning variant for cautionary actions"
+        title="Info Dialog"
+        description="Info variant for informational actions"
         code={`<DialogTrigger>
-  <Button variant="secondary">Reset Settings</Button>
+  <Button variant="secondary">Show Info</Button>
   <AlertDialog
-    title="Reset Settings"
-    variant="warning"
-    actionLabel="Reset"
+    title="Information"
+    variant="info"
+    actionLabel="Got it"
   >
-    This will reset all your settings to their default values.
+    This is an informational message for the user.
   </AlertDialog>
 </DialogTrigger>`}
       >
         <DialogTrigger>
-          <Button variant="secondary">Reset Settings</Button>
+          <Button variant="secondary">Show Info</Button>
           <AlertDialog
-            title="Reset Settings"
-            variant="warning"
-            actionLabel="Reset"
+            title="Information"
+            variant="info"
+            actionLabel="Got it"
           >
-            This will reset all your settings to their default values.
+            This is an informational message for the user.
           </AlertDialog>
         </DialogTrigger>
       </ComponentPreview>

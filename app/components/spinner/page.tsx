@@ -6,7 +6,10 @@ import { PropsTable } from "@/components/props-table";
 import { Loading } from "../../../falcon-ui-kit/dist/legacy/index.js";
 
 const loadingProps = [
-  { name: "size", type: '"small" | "medium" | "large"', default: '"medium"', description: "The size of the loading indicator" },
+  { name: "small", type: "boolean", default: "false", description: "Whether to show a smaller loading indicator" },
+  { name: "inline", type: "boolean", default: "false", description: "Whether to render inline" },
+  { name: "label", type: "string", description: "Accessible label for the loading indicator" },
+  { name: "hideText", type: "boolean", default: "false", description: "Whether to hide the loading text" },
 ];
 
 export default function SpinnerPage() {
@@ -28,29 +31,27 @@ export default function SpinnerPage() {
       </ComponentPreview>
 
       <ComponentPreview
-        title="Sizes"
-        description="Different sizes for various contexts"
-        code={`<Loading size="small" />
-<Loading size="medium" />
-<Loading size="large" />`}
+        title="Small Loading"
+        description="A smaller loading indicator for compact spaces"
+        code={`<Loading small />`}
       >
-        <Loading size="small" />
-        <Loading size="medium" />
-        <Loading size="large" />
+        <Loading small />
       </ComponentPreview>
 
       <ComponentPreview
-        title="With Text"
-        description="Loading with accompanying text"
-        code={`<div className="flex items-center gap-2">
-  <Loading />
-  <span>Loading...</span>
-</div>`}
+        title="Inline Loading"
+        description="Loading indicator rendered inline"
+        code={`<Loading inline />`}
       >
-        <div className="flex items-center gap-2">
-          <Loading />
-          <span className="text-muted-foreground">Loading...</span>
-        </div>
+        <Loading inline />
+      </ComponentPreview>
+
+      <ComponentPreview
+        title="With Label"
+        description="Loading with accompanying text"
+        code={`<Loading label="Loading content..." />`}
+      >
+        <Loading label="Loading content..." />
       </ComponentPreview>
 
       <h2 className="mb-4 mt-12 text-2xl font-semibold text-foreground">Props</h2>
