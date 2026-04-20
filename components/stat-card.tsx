@@ -11,7 +11,7 @@ interface StatCardProps {
 
 export function StatCard({ title, value, icon: Icon, badges }: StatCardProps) {
   return (
-    <div className="rounded-xl bg-white p-5 shadow-sm">
+    <div className="rounded-xl border border-neutral-200 bg-white p-5">
       {/* Header with icon and title */}
       <div className="mb-3 flex items-center gap-2">
         <Icon className="h-5 w-5 text-sky-500" strokeWidth={1.5} />
