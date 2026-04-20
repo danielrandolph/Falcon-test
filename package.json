@@ -1,7 +1,8 @@
 {
-  "name": "falcon-docs",
-  "version": "1.0.2",
+  "name": "falcon-ui-docs",
+  "version": "1.0.0",
   "private": true,
+  "description": "Design system documentation for Falcon UI Kit",
   "scripts": {
     "dev": "next dev --turbopack",
     "build": "next build",

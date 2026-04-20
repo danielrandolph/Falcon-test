@@ -1,7 +1,7 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  transpilePackages: ["@falcon/ui-kit"],
+  transpilePackages: ["react-aria-components", "react-aria"],
 };
 
 export default nextConfig;
