@@ -1,6 +1,7 @@
 "use client";
 
 import { AppSidebar } from "@/components/app-sidebar";
+import { SidebarProvider, useSidebar } from "@/components/sidebar-context";
 import { DashboardHeader } from "@/components/dashboard-header";
 import { StatCard } from "@/components/stat-card";
 import { SpotlightSection } from "@/components/spotlight-section";
@@ -94,11 +95,15 @@ const actionsLeaderboard = [
   },
 ];
 
-export default function Dashboard() {
+function DashboardContent() {
+  const { collapsed } = useSidebar();
   return (
     <div className="min-h-screen bg-gray-50">
       <AppSidebar />
-      <div className="pl-56">
+      <div
+        className="transition-all duration-200"
+        style={{ paddingLeft: collapsed ? "3.5rem" : "14rem" }}
+      >
         <DashboardHeader />
         <main className="p-6">
           {/* Tabs */}
@@ -195,5 +200,13 @@ export default function Dashboard() {
         </main>
       </div>
     </div>
+  );
+}
+
+export default function Dashboard() {
+  return (
+    <SidebarProvider>
+      <DashboardContent />
+    </SidebarProvider>
   );
 }
