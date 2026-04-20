@@ -5,15 +5,15 @@
   --font-sans: "Inter", system-ui, sans-serif;
   --font-mono: "JetBrains Mono", ui-monospace, monospace;
   
-  --color-background: #09090b;
-  --color-foreground: #fafafa;
-  --color-muted: #27272a;
-  --color-muted-foreground: #a1a1aa;
-  --color-border: #27272a;
+  --color-background: #ffffff;
+  --color-foreground: #0f172a;
+  --color-muted: #f1f5f9;
+  --color-muted-foreground: #64748b;
+  --color-border: #e2e8f0;
   --color-accent: #3b82f6;
-  --color-accent-foreground: #fafafa;
-  --color-card: #18181b;
-  --color-card-foreground: #fafafa;
+  --color-accent-foreground: #ffffff;
+  --color-card: #ffffff;
+  --color-card-foreground: #0f172a;
   --color-success: #22c55e;
   --color-warning: #f59e0b;
   --color-destructive: #ef4444;
@@ -34,7 +34,7 @@ body {
 
 /* Code block styling */
 pre {
-  background-color: var(--color-card);
+  background-color: var(--color-muted);
   border-radius: var(--radius-md);
   padding: 1rem;
   overflow-x: auto;
@@ -59,10 +59,10 @@ code {
 }
 
 ::-webkit-scrollbar-thumb {
-  background: var(--color-muted-foreground);
+  background: var(--color-border);
   border-radius: 4px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: var(--color-foreground);
+  background: var(--color-muted-foreground);
 }
