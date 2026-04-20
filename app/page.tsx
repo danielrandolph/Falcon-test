@@ -96,7 +96,7 @@ const actionsLeaderboard = [
 
 export default function Dashboard() {
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-gray-50">
       <AppSidebar />
       <div className="pl-56">
         <DashboardHeader />

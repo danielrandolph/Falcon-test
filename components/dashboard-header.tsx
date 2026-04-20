@@ -5,7 +5,7 @@ import { Button } from "../falcon-ui-kit/dist/index.js";
 
 export function DashboardHeader() {
   return (
-    <header className="flex h-14 items-center justify-between border-b border-neutral-200 bg-white px-6">
+    <header className="flex h-14 items-center justify-between border-b border-neutral-200 bg-gray-50 px-6">
       <h1 className="text-lg font-semibold text-neutral-800">Dashboard</h1>
       <div className="flex items-center gap-3">
         <div className="h-8 w-8 rounded-full bg-neutral-200 overflow-hidden">

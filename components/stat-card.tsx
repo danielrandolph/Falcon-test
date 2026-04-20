@@ -12,7 +12,7 @@ interface StatCardProps {
 
 export function StatCard({ title, value, icon: Icon, badges }: StatCardProps) {
   return (
-    <div className="rounded-lg border border-neutral-200 bg-neutral-50 p-4">
+    <div className="rounded-lg border border-neutral-200 bg-white p-4">
       <div className="mb-2 flex items-center gap-2 text-sm text-neutral-500">
         <Icon className="h-4 w-4" />
         <span>{title}</span>
