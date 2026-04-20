@@ -1,0 +1,33 @@
+:root {
+  --falcon-background: hsl(0 0% 100%);
+  --falcon-foreground: hsl(222.2 84% 4.9%);
+  --falcon-card: hsl(0 0% 100%);
+  --falcon-card-foreground: hsl(222.2 84% 4.9%);
+  --falcon-popover: hsl(0 0% 100%);
+  --falcon-popover-foreground: hsl(222.2 84% 4.9%);
+  --falcon-primary: hsl(222.2 47.4% 11.2%);
+  --falcon-primary-foreground: hsl(210 40% 98%);
+  --falcon-secondary: hsl(210 40% 96.1%);
+  --falcon-secondary-foreground: hsl(222.2 47.4% 11.2%);
+  --falcon-muted: hsl(210 40% 96.1%);
+  --falcon-muted-foreground: hsl(215.4 16.3% 46.9%);
+  --falcon-accent: hsl(210 40% 96.1%);
+  --falcon-accent-foreground: hsl(222.2 47.4% 11.2%);
+  --falcon-destructive: hsl(0 84.2% 60.2%);
+  --falcon-destructive-foreground: hsl(210 40% 98%);
+  --falcon-border: hsl(214.3 31.8% 91.4%);
+  --falcon-input: hsl(214.3 31.8% 91.4%);
+  --falcon-ring: hsl(222.2 84% 4.9%);
+  --falcon-radius: 0.5rem;
+
+  --falcon-space-1: 0.25rem;
+  --falcon-space-2: 0.5rem;
+  --falcon-space-3: 0.75rem;
+  --falcon-space-4: 1rem;
+  --falcon-space-5: 1.25rem;
+  --falcon-space-6: 1.5rem;
+
+  --falcon-shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+  --falcon-shadow-md:
+    0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+}

@@ -1,0 +1,91 @@
+.clearfix() {
+  &:before,
+  &:after {
+    content: " "; // 1
+    display: table; // 2
+  }
+  &:after {
+    clear: both;
+  }
+}
+
+.center-block() {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.clear-text-index(@top; @bottom) {
+  margin-top: -@top;
+  margin-bottom: -@bottom;
+}
+
+.remove-space(@font-size: @fz-base) {
+  font-size: 0;
+  > * {
+    font-size: @font-size;
+  }
+}
+
+.fill(@color: currentColor) {
+  color: @color;
+  fill: @color;
+}
+
+.reset-text() {
+  // We deliberately do NOT reset font-size.
+  font-style: normal;
+  font-weight: normal;
+  letter-spacing: normal;
+  line-break: auto;
+  text-align: left; // Fallback for where `start` is not supported
+  text-align: start;
+  text-decoration: none;
+  text-shadow: none;
+  text-transform: none;
+  white-space: normal;
+  word-break: normal;
+  word-spacing: normal;
+  word-wrap: normal;
+}
+
+.box-tab-margins-base {
+  margin-left: -@space-base;
+  margin-right: -@space-base;
+  padding-left: @space-base;
+  padding-right: @space-base;
+  border-left: none;
+  border-right: none;
+  border-radius: 0;
+}
+
+.box-mobile-margins-small {
+  margin-left: -@space-small;
+  margin-right: -@space-small;
+  padding-left: @space-small;
+  padding-right: @space-small;
+  border-left: none;
+  border-right: none;
+  border-radius: 0;
+}
+
+.box-mobile-margins-base {
+  @media (max-width: @screen-xs-max) {
+    margin-left: -@space-small;
+    margin-right: -@space-small;
+    border-left: none !important;
+    border-right: none !important;
+    border-radius: 0;
+  }
+}
+
+.hide-scrollbar {
+  scrollbar-width: none !important; /* Firefox */
+  -ms-overflow-style: none !important; /* IE 10+ */
+
+  &::-webkit-scrollbar {
+    display: none !important; // Safari and Chrome
+    width: 0 !important;
+    height: 0 !important;
+  }
+}

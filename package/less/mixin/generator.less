@@ -1,0 +1,190 @@
+@import "generators/margins-paddings-modify";
+
+.circle-gen(@color:currentColor, @size: @component-large-height, @stroke:0, @bg-color:transparent) {
+  border-radius: 50%;
+  width: @size;
+  height: @size;
+  border: @stroke solid @color;
+  text-align: center;
+  line-height: @size;
+  background-color: @bg-color;
+}
+
+.circle-add-color(@color; @text-color: inherit) {
+  border-color: @color;
+  &.circle-fill {
+    color: @text-color;
+    background-color: @color;
+  }
+}
+
+.triangle-base {
+  width: 0;
+  height: 0;
+  border-style: solid;
+}
+
+.triangle-gen(@direction:"left", @color: currentColor, @triangle-width:4px, @triangle-height:4px)
+  when
+  (@direction = "left") {
+  .triangle-base;
+  border-width: @triangle-height / 2 @triangle-width @triangle-height / 2 0;
+  border-color: transparent @color transparent transparent;
+}
+
+.triangle-gen(@direction:"left", @color: currentColor, @triangle-width:4px, @triangle-height:4px)
+  when
+  (@direction = "right") {
+  .triangle-base;
+  border-width: @triangle-height / 2 0 @triangle-height / 2 @triangle-width;
+  border-color: transparent transparent transparent @color;
+}
+
+.triangle-gen(@direction:"left", @color: currentColor, @triangle-width:4px, @triangle-height:4px)
+  when
+  (@direction = "top") {
+  .triangle-base;
+  border-width: 0 @triangle-width / 2 @triangle-height @triangle-width / 2;
+  border-color: transparent transparent @color transparent;
+}
+
+.triangle-gen(@direction:"left", @color: currentColor, @triangle-width:4px, @triangle-height:4px)
+  when
+  (@direction = "bottom") {
+  .triangle-base;
+  border-width: @triangle-height @triangle-width / 2 0 @triangle-width / 2;
+  border-color: @color transparent transparent transparent;
+}
+
+.plus-gen(@size: 10px, @line-size:2px, @color: currentColor) {
+  @position: @size / 2 - @line-size / 2;
+  position: relative;
+  width: @size;
+  height: @size;
+  display: inline-block;
+  &::after,
+  &::before {
+    content: "";
+    position: absolute;
+    background-color: @color;
+  }
+  &::before {
+    left: @position;
+    top: 0;
+    width: @line-size;
+    height: @size;
+  }
+  &::after {
+    top: @position;
+    left: 0;
+    height: @line-size;
+    width: @size;
+  }
+}
+
+.minus-gen(@size: 10px, @line-size:2px, @color: currentColor) {
+  width: @size;
+  height: @line-size;
+  display: inline-block;
+  background-color: @color;
+}
+
+.inline-list-gen(@fz: @fz-base, @space: @space-small, @divider-color: correntColor, @divider-lift: 1px) {
+  .remove-space(@fz);
+  .list-item {
+    display: inline-block;
+
+    + .list-item {
+      &::before {
+        position: relative;
+        content: "|";
+        margin-left: @space - 2;
+        margin-right: @space - 2;
+        top: -@divider-lift;
+        color: @divider-color;
+      }
+    }
+  }
+}
+
+.inline-list-gen-v2(@fz: @fz-base, @space: @space-small, @divider-color: correntColor, @divider-height: @space-12) {
+  .remove-space(@fz);
+  .list-item {
+    display: inline-block;
+
+    + .list-item {
+      position: relative;
+      padding-left: @space * 2 + 1;
+
+      &::before {
+        content: "";
+        position: absolute;
+        border-left: 1px solid @divider-color;
+        height: @divider-height;
+        top: 50%;
+        left: @space;
+        transform: translate(0, -50%);
+      }
+    }
+  }
+}
+
+.grid-gen(@space-horizontal: @space-base; @space-vertical: @space-base; @min-size) {
+  > .row {
+    margin-top: -@space-vertical;
+    @media (min-width: @min-size) {
+      margin-right: -@space-horizontal;
+      margin-left: 0;
+    }
+
+    > [class*="col-md"] {
+      @media (min-width: @screen-md-min) {
+        padding-right: @space-horizontal;
+        padding-left: 0;
+      }
+    }
+
+    > [class*="col-sm"] {
+      @media (min-width: @screen-sm-min) {
+        padding-right: @space-horizontal;
+        padding-left: 0;
+      }
+    }
+
+    > [class*="col-xs"] {
+      padding-right: @space-horizontal;
+      padding-left: 0;
+    }
+
+    > * {
+      padding-top: @space-vertical;
+    }
+  }
+}
+
+// START: Generate SVG icons size
+.icon-size-gen(@icon-size-list, @i: length(@icon-size-list)) when (@i > 0) {
+  @size-value: extract(@icon-size-list, @i);
+  @size: unit(@size-value);
+
+  @icon-size-class: ~".icon-size-@{size}";
+
+  @{icon-size-class} {
+    width: @size-value !important;
+    height: @size-value !important;
+  }
+
+  .icon-size-gen(@icon-size-list, @i - 1);
+}
+
+// END: Generate SVG icons size
+
+.bg-opacity (@color) {
+  background-color: fade(@color, 5%);
+}
+
+.border-opacity (@color) {
+  border-width: 1px;
+  border-style: solid;
+  border-color: fade(@color, 40%);
+}

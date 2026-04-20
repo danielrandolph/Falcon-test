@@ -1,0 +1,63 @@
+.root-c5MAPk {
+  color: #444;
+  border-radius: 8px;
+  gap: 12px;
+  padding: 16px;
+  display: flex;
+}
+
+.root_variant_blue-uI_ftt {
+  color: #0b67a9;
+  background: #e7f4fd;
+}
+
+.root_variant_green-cHyx_P {
+  color: #3d8a61;
+  background: #eef9f3;
+}
+
+.root_variant_neutral-ODzfRh {
+  background: #f2f2f2;
+}
+
+.root_variant_purple-UZ4UQv {
+  color: #5c64b1;
+  background: #f2f4fe;
+}
+
+.root_variant_red-DPPGBv {
+  color: #b44241;
+  background: #ffefef;
+}
+
+.root_variant_yellow-V6dvbd {
+  color: #b58c3d;
+  background: #fff9ee;
+}
+
+.icon-PImz0H {
+  flex: none;
+  width: 20px;
+  height: 20px;
+}
+
+.text-TPjgxv {
+  flex-direction: column;
+  flex: 1;
+  gap: 4px;
+  display: flex;
+}
+
+.title-gyN6NI {
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 20px;
+}
+
+.description-oFLzw5 {
+  color: #444;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 20px;
+}
+

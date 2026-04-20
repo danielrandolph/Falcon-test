@@ -1,0 +1,1 @@
+{"version":3,"file":"meter.d.ts","sourceRoot":"","sources":["../src/meter.tsx"],"names":[],"mappings":"AAEA,OAAO,KAAK,EAAE,UAAU,IAAI,cAAc,EAAE,MAAM,uBAAuB,CAAC;AAM1E,UAAU,KAAM,SAAQ,cAAc;IACpC,KAAK,CAAC,EAAE,MAAM,CAAC;CAChB;AAED,wBAAgB,KAAK,CAAC,EAAE,KAAK,EAAE,GAAG,UAAU,EAAE,EAAE,KAAK,2CAsCpD"}

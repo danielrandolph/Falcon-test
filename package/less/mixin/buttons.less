@@ -1,0 +1,238 @@
+// Button variants
+//
+// Easily pump out default styles, as well as :hover, :focus, :active,
+// and disabled options for all buttons
+
+.button-colors {
+  color: var(--btn-color);
+  background-color: var(--btn-background);
+
+  @media (hover: hover) {
+    &:hover {
+      color: var(--btn-color);
+      background-color: var(--btn-background-hover);
+    }
+  }
+
+  @media (hover: none) {
+    &:active {
+      color: var(--btn-color);
+      background-color: var(--btn-background-hover);
+    }
+  }
+
+  .open > .dropdown-toggle& {
+    color: var(--btn-color);
+    background-color: var(--btn-background-hover);
+
+    &:hover {
+      color: var(--btn-color);
+      background-color: var(--btn-background-hover);
+    }
+  }
+
+  &:active,
+  &.active,
+  .open > .dropdown-toggle& {
+    background-image: none;
+  }
+
+  &.disabled,
+  &[disabled],
+  fieldset[disabled] & {
+    &:hover {
+      background-color: var(--btn-background);
+    }
+  }
+
+  .badge {
+    color: var(--btn-background);
+    background-color: var(--btn-color);
+  }
+
+  &.btn-border-view {
+    font-weight: @btn-font-weight;
+    color: var(--btn-outline-color);
+    border: 1px solid var(--btn-outline-border);
+    background-color: var(--btn-outline-background);
+
+    &.disabled,
+    &[disabled],
+    fieldset[disabled] & {
+      opacity: 0.4;
+
+      &:hover {
+        color: var(--btn-outline-color);
+        background-color: var(--btn-outline-background);
+        border-color: var(--btn-outline-border);
+      }
+    }
+
+    @media (hover: hover) {
+      &:hover {
+        color: var(--btn-outline-color-hover);
+        border-color: var(--btn-outline-border-hover);
+      }
+    }
+    @media (hover: none) {
+      &:active {
+        color: var(--btn-outline-color-hover);
+        border-color: var(--btn-outline-border-hover);
+      }
+    }
+
+    .loader .path {
+      stroke: var(--btn-outline-color);
+    }
+  }
+}
+
+.button-variant(
+  @color,
+  @border-view-color,
+  @background,
+  @background-hover,
+  @border,
+  @border-view-bg,
+) {
+  &:extend(.button-colors all);
+
+  --btn-background: @background;
+  --btn-background-hover: @background-hover;
+  --btn-color: @color;
+
+  --btn-outline-border: @border;
+  --btn-outline-border-hover: darken(@border, 10%);
+  --btn-outline-background: @border-view-bg;
+  --btn-outline-color: @border-view-color;
+  --btn-outline-color-hover: darken(@border-view-color, 10%);
+}
+
+//START: Generate Btn Gutter
+.generate-btn-gutter-rules(@btn-gutter-list, @i: length(@btn-gutter-list))
+  when
+  (@i > 0) {
+  @btn-gutter-value: extract(@btn-gutter-list, @i);
+
+  .generate-btn-gutter-class(@btn-gutter-value, @btn-gutter-list);
+
+  .generate-btn-gutter-rules(@btn-gutter-list, @i - 1);
+}
+
+.generate-btn-gutter-rules(@btn-gutter-list);
+
+.generate-btn-gutter-class(@btn-gutter-value, @btn-gutter-list) {
+  @gutter: unit(@btn-gutter-value);
+  @gutter-class: ~".btn.btn--gutter-@{gutter}";
+
+  @{gutter-class} {
+    padding-right: @btn-gutter-value;
+    padding-left: @btn-gutter-value;
+  }
+
+  .generate-responsive-btn-gutters(@gutter, @btn-gutter-list, @screen-xl-max, "xl");
+  .generate-responsive-btn-gutters(@gutter, @btn-gutter-list, @screen-lg-max, "lg");
+  .generate-responsive-btn-gutters(@gutter, @btn-gutter-list, @screen-md-max, "md");
+  .generate-responsive-btn-gutters(@gutter, @btn-gutter-list, @screen-sm-max, "sm");
+  .generate-responsive-btn-gutters(@gutter, @btn-gutter-list, @screen-xs-max, "xs");
+  .generate-responsive-btn-gutters(@gutter, @btn-gutter-list, @screen-xxs-max, "xxs");
+}
+
+.generate-responsive-btn-gutters(@gutter, @btn-gutter-list, @screen-max, @screen-prefix) {
+  @media (max-width: @screen-max) {
+    .loop-gutters(@btn-gutter-list, @j: 1)
+      when
+      (@j <= length(@btn-gutter-list)) {
+      @gutter-value-second: extract(@btn-gutter-list, @j);
+      @gutter-second: unit(@gutter-value-second);
+
+      @gutter-class: ~".btn.btn--gutter-@{gutter-second}-@{screen-prefix}";
+
+      @{gutter-class} {
+        padding-right: @gutter-value-second;
+        padding-left: @gutter-value-second;
+      }
+
+      .loop-gutters(@btn-gutter-list, @j + 1);
+    }
+
+    .loop-gutters(@btn-gutter-list);
+  }
+}
+
+//END: Generate Btn Gutter
+
+//START: Generate Btn Size
+.setBtnHeight(@value) {
+  .this-styles(@value) {
+    height: @value;
+    line-height: @value;
+    &.btn-file {
+      height: @value;
+      line-height: @value;
+    }
+    &.btn-border-view,
+    &.btn-select-view {
+      line-height: @value - 2;
+    }
+    &.btn-icon {
+      width: @value;
+      height: @value;
+    }
+  }
+  .this-styles(@value);
+}
+
+.generate-btn-size-rules(@btn-size-list, @i: length(@btn-size-list))
+  when
+  (@i > 0) {
+  @btn-size-value: extract(@btn-size-list, @i);
+
+  .generate-btn-size-class(@btn-size-value, @btn-size-list);
+
+  .generate-btn-size-rules(@btn-size-list, @i - 1);
+}
+
+.generate-btn-size-rules(@btn-size-list);
+
+.generate-btn-size-class(@btn-size-value, @btn-size-list) {
+  @size: unit(@btn-size-value);
+  @size-class: ~".btn.btn--size-@{size}";
+
+  @{size-class} {
+    .setBtnHeight(@btn-size-value);
+  }
+
+  .generate-responsive-btn-size(@size, @btn-size-list, @screen-xl-max, "xl");
+  .generate-responsive-btn-size(@size, @btn-size-list, @screen-lg-max, "lg");
+  .generate-responsive-btn-size(@size, @btn-size-list, @screen-md-max, "md");
+  .generate-responsive-btn-size(@size, @btn-size-list, @screen-sm-max, "sm");
+  .generate-responsive-btn-size(@size, @btn-size-list, @screen-xs-max, "xs");
+  .generate-responsive-btn-size(@size, @btn-size-list, @screen-xxs-max, "xxs");
+}
+
+.generate-responsive-btn-size(@size, @btn-size-list, @screen-max, @screen-prefix) {
+  @media (max-width: @screen-max) {
+    .loop-size(@btn-size-list, @j: 1) when (@j <= length(@btn-size-list)) {
+      @size-value-second: extract(@btn-size-list, @j);
+      @size-second: unit(@size-value-second);
+
+      @size-class: ~".btn.btn--size-@{size-second}-@{screen-prefix}";
+
+      @{size-class} {
+        .setBtnHeight(@size-value-second);
+      }
+
+      .loop-size(@btn-size-list, @j + 1);
+    }
+
+    .loop-size(@btn-size-list);
+  }
+}
+
+.reduce-btn-height(@btn-size, @spacing) {
+  height: (@btn-size - @spacing);
+  line-height: (@btn-size - @spacing);
+}
+
+//END: Generate Btn Size

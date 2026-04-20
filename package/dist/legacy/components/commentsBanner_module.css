@@ -1,0 +1,49 @@
+.root-jyMeA9 {
+  background: #fffad5;
+  border: 1px solid #1111111f;
+  border-radius: 8px;
+  align-items: start;
+  gap: 12px;
+  padding: 16px;
+  display: flex;
+}
+
+.icon-cNbHbR {
+  color: #111;
+  width: 20px;
+  height: 20px;
+}
+
+.text-dxje7k {
+  flex: 1 1 min-content;
+  flex-direction: column;
+  gap: 4px;
+  display: flex;
+}
+
+.titleAndTimeStamp-D0605H {
+  align-items: center;
+  gap: 12px;
+  display: flex;
+}
+
+.title-YvFNCN {
+  flex: 1 1 min-content;
+  color: #111;
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 20px;
+}
+
+.timeStamp-zXSkFY {
+  color: #888;
+  font-size: 13px;
+  line-height: 18px;
+}
+
+.description-Q7IrTV {
+  color: #444;
+  font-size: 13px;
+  line-height: 1.2;
+}
+

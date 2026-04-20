@@ -1,0 +1,859 @@
+//Colors
+
+//Primary Palette
+@green-50: #eef9f3;
+@green-100: #cbecda;
+@green-200: #b1e3c8;
+@green-300: #8ed6af;
+@green-400: #78cea0;
+@green-500: #56c288;
+@green-600: #4eb17c;
+@green-700: #3d8a61;
+@green-800: #2f6b4b;
+@green-900: #245139;
+
+@yellow-50: #fff9ee;
+@yellow-100: #ffedcb;
+@yellow-200: #ffe4b1;
+@yellow-300: #ffd88e;
+@yellow-400: #ffd178;
+@yellow-500: #ffc556;
+@yellow-600: #e8b34e;
+@yellow-700: #b58c3d;
+@yellow-800: #8c6c2f;
+@yellow-900: #6b5324;
+
+@blue-50: #e7f4fd;
+@blue-100: #b5ddfa;
+@blue-200: #91ccf7;
+@blue-300: #5eb5f4;
+@blue-400: #3fa7f1;
+@blue-500: #0f91ee;
+@blue-600: #0e84d9;
+@blue-700: #0b67a9;
+@blue-800: #085083;
+@blue-900: #063d64;
+
+@purple-50: #f2f4fe;
+@purple-100: #d8dcfd;
+@purple-200: #c5cbfc;
+@purple-300: #abb3fb;
+@purple-400: #9aa4fa;
+@purple-500: #818df9;
+@purple-600: #7580e3;
+@purple-700: #5c64b1;
+@purple-800: #474e89;
+@purple-900: #363b69;
+
+@red-50: #ffefef;
+@red-100: #fecdcc;
+@red-200: #feb4b4;
+@red-300: #fe9292;
+@red-400: #fd7d7d;
+@red-500: #fd5d5c;
+@red-600: #e65554;
+@red-700: #b44241;
+@red-800: #8b3333;
+@red-900: #6a2727;
+
+// Secondary Palette
+@lime-50: #f0f9ee;
+@lime-100: #d1eccb;
+@lime-200: #bbe3b2;
+@lime-300: #9dd68e;
+@lime-400: #89ce79;
+@lime-500: #6cc257;
+@lime-600: #62b14f;
+@lime-700: #4d8a3e;
+@lime-800: #3b6b30;
+@lime-900: #2d5125;
+
+@orange-50: #fff5ee;
+@orange-100: #ffe1ca;
+@orange-200: #ffd2b1;
+@orange-300: #ffbe8d;
+@orange-400: #ffb177;
+@orange-500: #ff9e55;
+@orange-600: #e8904d;
+@orange-700: #b5703c;
+@orange-800: #8c572f;
+@orange-900: #6b4224;
+
+@navy-50: #f0fafd;
+@navy-100: #d0f1f8;
+@navy-200: #b9eaf4;
+@navy-300: #98e0f0;
+@navy-400: #85daed;
+@navy-500: #66d1e8;
+@navy-600: #5dbed3;
+@navy-700: #4894a5;
+@navy-800: #387380;
+@navy-900: #2b5861;
+
+@violet-50: #f8f3ff;
+@violet-100: #eadafd;
+@violet-200: #e0ccfd;
+@violet-300: #d1affc;
+@violet-400: #c99ffb;
+@violet-500: #bb87fa;
+@violet-600: #aa7be4;
+@violet-700: #8560b2;
+@violet-800: #674a8a;
+@violet-900: #4f3969;
+
+@pink-50: #fff0f6;
+@pink-100: #fdd0e4;
+@pink-200: #fdb9d7;
+@pink-300: #fc99c5;
+@pink-400: #fb85ba;
+@pink-500: #fa67a9;
+@pink-600: #e45e9a;
+@pink-700: #b24978;
+@pink-800: #8a395d;
+@pink-900: #692b47;
+
+@gray-extra-dark: #333333;
+@link-color: var(--theme-color-secondary);
+@link-color-bg: var(--theme-color-secondary-faded-8);
+
+@color-text-dark: #111111;
+@color-text-base: #444444;
+
+@color-gray: #888888;
+@color-page-bg: #f2f2f2;
+
+@warning-color: #d17f1b; //color deprecated
+@success-color: #5dac3a; //color deprecated
+@scheduled-color: #d09a5a; //color deprecated
+
+@color-success: @success-color;
+@color-warning: @warning-color;
+@color-scheduled: @scheduled-color;
+
+@blue: @color-text-dark;
+@orange: var(--theme-color-primary);
+@blue-light: var(--theme-color-secondary);
+
+@green: var(--theme-color-special);
+@text-color-base: @color-text-base;
+@red: var(--theme-color-danger);
+
+@gray: @color-gray;
+@gray-light: var(--theme-color-light-gray);
+@gray-dark-bg: @color-page-bg;
+
+@color-special-2: #009c8a; // @green-2
+
+@yellow: #ffc516;
+
+@white: #ffffff;
+@black: #000000;
+
+@traits-color: #9d1c31;
+
+@jd-green: #367c2b;
+@jd-green-hover: darken(@jd-green, 10%);
+@jd-yellow: #ffde00;
+
+@ffa-blue: #004c97;
+@ffa-yellow: #ffcd00;
+
+@rabo-color: #031196;
+
+@corteva-color: #23772d;
+@corteva-green-color: #23da7c;
+
+@cfa-color: #68724d;
+
+@winfield-color: #0b3d52;
+
+@farmop-color: #006937;
+
+@marketing-green: #4bbe30;
+@marketing-blue: #309fbe;
+
+@marketing-container-color: @marketing-green;
+@marketing-element-color: @marketing-blue;
+@marketing-elem-tb-space: @space-medium;
+@marketing-elem-tb-space-sm: @space-base;
+@marketing-elem-cover-space: 3px + 2; // 2 - border width;
+@marketing-container-ear-space: 48px;
+@marketing-highlight-cover-container-space: @space-section;
+@marketing-email-preview-shadow: 0px 5px 50px 0px rgba(0, 0, 0, 0.1);
+
+@green-light-bg: #fafdf8;
+@gray-bg: #f8f8f8;
+//@color-page-bg:        #f2f2f2;
+@border-color: #e2e2e2;
+
+@draft-color: @color-gray;
+
+@progress-color: var(--theme-color-secondary);
+
+@line-height-base: 1.2;
+@line-height-medium: 1.4;
+@line-height-large: 1.6;
+@border-radius-base: 2px;
+@border-radius-medium: 4px;
+@border-radius-large: 8px;
+
+@border-radius-2: 2px;
+@border-radius-4: 4px;
+@border-radius-8: 8px;
+@border-radius-10: 10px;
+@border-radius-16: 16px;
+@border-radius-24: 24px;
+
+@default-border: 1px solid @border-color;
+
+//Spaces
+@space-smallest: 3px;
+@space-4: 4px;
+@space-6: 6px;
+@space-extra-small: 8px;
+@space-12: 12px;
+@space-small: 16px;
+@space-20: 20px;
+@space-base: 24px;
+@space-medium: 32px;
+@space-large: 36px;
+@space-extra-large: 42px;
+@space-56: 56px;
+@space-62: 62px;
+
+@space-section: 72px;
+@space-92: 92px;
+
+//Font Size
+@fz-smallest: 11px;
+@fz-extra-small: 12px;
+@fz-small: 13px;
+@fz-base: 15px;
+@fz-18: 18px;
+@fz-medium: 20px;
+@fz-large: 26px;
+@fz-upper-large: 32px;
+@fz-extra-large: 40px;
+@fz-44: 44px;
+
+@ff-base: "Roboto", sans-serif;
+
+//Font Size list values for generate-font-size-rules mixin
+@font-size-values: @fz-smallest, @fz-extra-small, @fz-small, @fz-base, @fz-18,
+  @fz-medium, @fz-large, @fz-upper-large, @fz-extra-large, @fz-44;
+
+//SVG icon size list values for icon-size-gen mixin
+@svg-icon-size-values: @space-extra-small, @space-12, @space-small, @space-20,
+  @space-base, @space-medium, @space-large, @space-extra-large, @space-56,
+  @space-62, @space-section, @space-92;
+
+//File Path
+@theme-id: "252bc8c9731f40ae989b9cfd2fa68e20";
+@app-icon-path: "/src/images/theme/@{theme-id}/app-icon.png";
+@landing-page-bg-path: "/src/images/theme/@{theme-id}/landing-banner.jpg";
+@about-banner-bg-path: "/src/images/theme/@{theme-id}/about-us-banner.jpg";
+
+@home-banner-img-path: "/src/images/theme/@{theme-id}/home-banner.jpg";
+@home-banner-img-sm-path: "/src/images/theme/@{theme-id}/home-banner-sm.jpg";
+
+@home-banner-img-energy-path: "/src/images/theme/@{theme-id}/home-banner-energy.jpg";
+@home-banner-img-energy-sm-path: "/src/images/theme/@{theme-id}/home-banner-energy-sm.jpg";
+
+//Components
+@component-extra-large-height: 72px;
+@component-large-height: 56px;
+@component-medium-height: 44px;
+@component-base-height: 36px;
+
+//Intercom Badge
+@intercom-badge-space: 20px;
+@intercom-badge-size: 60px;
+
+//Caret
+@caret-width-base: 10px;
+@caret-height-base: 5px;
+@caret-space: @space-extra-small;
+
+//Field Container
+@field-cont-bottom-space: 18px;
+@field-cont-bottom-space-xs: 18px;
+@field-cont-name-bottom-space: 10px;
+@field-cont-elem-bottom-space: @space-extra-small;
+
+//Control Color Theme
+@control-color-base: var(--theme-color-secondary);
+@control-color-base-hover: var(--theme-color-secondary-darkened-10);
+
+@control-color-dark-blue: @color-text-dark;
+@control-color-dark-blue-hover: darken(@control-color-dark-blue, 10%);
+
+@control-color-white: @white;
+@control-color-white-hover: darken(@control-color-white, 10%);
+
+@control-color-light-gray: @gray-bg;
+@control-color-light-gray-hover: darken(@gray-bg, 10%);
+
+@control-color-gray: @color-gray;
+@control-color-gray-hover: darken(@color-gray, 10%);
+
+@control-color-dark-gray: @color-text-base;
+@control-color-dark-gray-hover: darken(@color-text-base, 10%);
+
+@control-color-green: var(--theme-color-special);
+@control-color-green-hover: var(--theme-color-special-darkened-10);
+
+@control-color-red: var(--theme-color-danger);
+@control-color-red-hover: var(--theme-color-danger-darkened-10);
+
+@control-color-orange: var(--theme-color-primary);
+@control-color-orange-hover: var(--theme-color-primary-darkened-10);
+
+@control-color-yellow: @yellow;
+@control-color-yellow-hover: darken(@control-color-yellow, 10%);
+
+@control-color-warning: @color-warning;
+@control-color-warning-hover: darken(@control-color-warning, 10%);
+
+@control-color-marketing-green: @marketing-green;
+@control-color-marketing-green-hover: darken(
+  @control-color-marketing-green,
+  10%
+);
+
+@control-color-marketing-blue: @marketing-blue;
+@control-color-marketing-blue-hover: darken(@control-color-marketing-blue, 10%);
+
+@control-color-link: var(--theme-color-link);
+@control-color-link-hover: var(--theme-color-link-darkened-10);
+
+@control-color-rabo: @rabo-color;
+@control-color-rabo-hover: darken(@control-color-rabo, 10%);
+
+@control-color-corteva: @corteva-color;
+@control-color-corteva-hover: darken(@control-color-corteva, 10%);
+
+@control-color-jd-green: @jd-green;
+@control-color-jd-green-hover: darken(@control-color-jd-green, 10%);
+
+@control-color-jd-yellow: @jd-yellow;
+@control-color-jd-yellow-hover: darken(@control-color-jd-yellow, 10%);
+
+@control-color-farmop: @farmop-color;
+@control-color-farmop-hover: darken(@control-color-farmop, 10%);
+
+//Form
+@form-elem-height: @component-medium-height;
+@form-elem-medium-height: @component-medium-height;
+@form-elem-large-height: @component-large-height;
+@form-font-size: @fz-base;
+@form-space-base: @space-small;
+@form-border-color: #cccccc;
+@form-border-color-hover: @color-gray;
+@form-border-radius: 8px;
+@form-placeholder: @color-gray;
+@form-placeholder-focus: #bbbbbb;
+@form-disable-color: #cccccc;
+
+// Switcher
+@switcher-width: 32px;
+@switcher-height: 18px;
+@switcher-button-size: 14px;
+
+@switcher-primary-gray-on-bg: var(--theme-color-primary);
+@switcher-primary-gray-off-bg: #aaaaaa;
+
+@switcher-disabled-on-bg: var(--theme-color-primary-tinted-30);
+@switcher-disabled-off-bg: mix(#aaaaaa, #fff, 30%);
+
+//Filters
+@filter-block-space: @space-medium;
+
+// Toolbar
+@toolbar-height: 119px;
+@toolbar-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.12);
+
+// Boxes
+@color-text-dark-box-border-color: #d1e0e8;
+@color-text-dark-box-bg-color: #f8fbfd;
+
+// Box Shadows
+@box-shadow-1: 0 8px 16px 0 rgba(0, 0, 0, 0.4);
+@box-shadow-2: 0 2px 4px 0 rgba(0, 0, 0, 0.15);
+
+//Button
+@btn-font-weight: 500;
+@btn-font-size: @fz-base;
+@btn-large-height: @component-large-height;
+@btn-medium-height: @component-medium-height;
+@btn-height: @component-base-height;
+@btn-small: 24px;
+@btn-partner-portal-height: 32px;
+
+//Btn Size list values for generate-btn-size-rules mixin
+@btn-size-list: @btn-small, @btn-partner-portal-height, @btn-height,
+  @btn-medium-height, @btn-large-height;
+
+//Btn Gutters list values for generate-btn-gutter-rules mixin
+@btn-gutter-list: 0px, @space-12, @space-small, @space-base, @space-medium,
+  @space-large;
+
+@btn-border-radius: 8px;
+
+@btn-default-color: @white;
+@btn-default-bg: @control-color-base;
+@btn-default-hover: @control-color-base-hover;
+@btn-default-border: var(--theme-color-secondary-tinted-40);
+@btn-default-bv-bg: @white;
+
+@btn-gray-color: @white;
+@btn-gray-bg: @control-color-gray;
+@btn-gray-hover: @control-color-gray-hover;
+@btn-gray-border: mix(@btn-gray-bg, @white, 40%);
+@btn-gray-bv-bg: @white;
+
+@btn-dark-gray-color: @white;
+@btn-dark-gray-bg: @control-color-dark-gray;
+@btn-dark-gray-hover: @control-color-dark-gray-hover;
+@btn-dark-gray-border: @control-color-dark-gray;
+@btn-dark-gray-bv-bg: @white;
+
+@btn-red-color: @white;
+@btn-red-bg: @control-color-red;
+@btn-red-hover: @control-color-red-hover;
+@btn-red-border: var(--theme-color-danger-tinted-40);
+@btn-red-bv-bg: @white;
+
+@btn-orange-color: @white;
+@btn-orange-bg: @control-color-orange;
+@btn-orange-hover: @control-color-orange-hover;
+@btn-orange-border: var(--theme-color-primary-tinted-40);
+@btn-orange-bv-bg: @white;
+
+@btn-warning-color: @white;
+@btn-warning-bg: @control-color-warning;
+@btn-warning-hover: @control-color-warning-hover;
+@btn-warning-border: @control-color-warning;
+@btn-warning-bv-bg: @white;
+
+@btn-green-color: @white;
+@btn-green-bg: @control-color-green;
+@btn-green-hover: @control-color-green-hover;
+@btn-green-border: @control-color-green;
+@btn-green-bv-bg: @white;
+
+@btn-marketing-green-color: @white;
+@btn-marketing-green-bg: @control-color-marketing-green;
+@btn-marketing-green-hover: @control-color-marketing-green-hover;
+@btn-marketing-green-border: var(--theme-color-secondary-tinted-40);
+@btn-marketing-green-bv-bg: @white;
+
+@btn-marketing-blue-color: @white;
+@btn-marketing-blue-bg: @control-color-marketing-blue;
+@btn-marketing-blue-hover: @control-color-marketing-blue-hover;
+@btn-marketing-blue-border: var(--theme-color-secondary-tinted-40);
+@btn-marketing-blue-bv-bg: @white;
+
+@btn-jd-green-color: @white;
+@btn-jd-green-bg: @jd-green;
+@btn-jd-green-hover: @jd-green;
+@btn-jd-green-border: @jd-green;
+@btn-jd-green-bv-bg: @white;
+
+@btn-corteva-color: @white;
+@btn-corteva-bg: @corteva-color;
+@btn-corteva-hover: @corteva-color;
+@btn-corteva-border: @corteva-color;
+@btn-corteva-bv-bg: @white;
+
+@btn-farmop-color: @white;
+@btn-farmop-bg: @farmop-color;
+@btn-farmop-hover: @farmop-color;
+@btn-farmop-border: @farmop-color;
+@btn-farmop-bv-bg: transparent;
+
+@btn-goose-color: @white;
+@btn-goose-bg: @goose-chat-dark-color;
+@btn-goose-hover: darken(@goose-chat-dark-color, 10%);
+@btn-goose-border: @goose-chat-dark-color;
+@btn-goose-bv-bg: transparent;
+
+@btn-rabo-color: @white;
+@btn-rabo-bg: @rabo-color;
+@btn-rabo-hover: @rabo-color;
+@btn-rabo-border: @rabo-color;
+@btn-rabo-bv-bg: @white;
+
+//Dropdown
+@dropdown-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.3);
+@z-index-dropdown: 1010;
+@dropdown-wrapper-width: 350px;
+@dropdown-min-width-base: 280px;
+@dropdown-menu-hover: #f8f8f8;
+@dropdown-tick-width: 24px;
+@dropdown-active-content-color: var(--theme-color-primary);
+@dropdown-item-height-base: @component-base-height;
+@dropdown-item-height-large: @component-medium-height;
+
+//Alert
+@alert-padding-tb: @space-extra-small;
+@alert-gutter: @space-12;
+@alert-warning-color: @color-text-base;
+@alert-warning-bg: #fffad5;
+@alert-warning-icon-color: @warning-color;
+
+//Message
+@message-info-bg: @alert-warning-bg;
+@message-info-border: darken(@alert-warning-bg, 50%);
+@message-box-bg: @blue-50;
+@message-box-gray-bg: #f2f2f2;
+
+//Badge
+@badge-height: 20px;
+@badge-arrow-width: 5px;
+
+//@badge-default-color:             #437af8;
+
+@badge-orange-color: @white;
+@badge-orange-bg: var(--theme-color-primary);
+
+@badge-gray-light-color: @color-text-base;
+@badge-gray-light-bg: @gray-bg;
+
+@badge-blue-light-color: @white;
+@badge-blue-light-bg: var(--theme-color-secondary);
+
+@badge-blue-v1-color: @white;
+@badge-blue-v1-bg: var(--theme-color-badge-default);
+
+@badge-green-v1-color: @white;
+@badge-green-v1-bg: @color-special-2;
+
+@badge-green-v2-color: @white;
+@badge-green-v2-bg: #51982e;
+
+@badge-brown-color: @white;
+@badge-brown-bg: #a99b8d;
+
+@badge-yellow-color: #222;
+@badge-yellow-bg: @jd-yellow;
+
+// Badge status
+@badge-status-default-color: #e2e2e2;
+@badge-status-deleted-color: rgba(224, 36, 36, 0.1);
+@badge-status-open-color: #fff3d0;
+@badge-status-pending-color: #ffdfaf;
+@badge-status-shipped-color: #cae9d4;
+@badge-status-invoiced-color: rgba(61, 121, 203, 0.2);
+@badge-status-canceled-color: #e6e6e6;
+@badge-status-height: 32px;
+@badge-status-height-small: 24px;
+@badge-status-height-medium: 36px;
+
+// Element background
+
+@element-bg-color: var(--theme-color-link-tinted-10);
+
+//Product Component
+@product-offer-border-radius: @border-radius-large;
+@offer-body-gutter: @space-small;
+@offer-body-gutter-sm: @space-12;
+@offer-details-section-space: @space-20;
+@offer-body-bottom-space: @space-20;
+
+//Chat Component
+@chat-message-border-radius: @border-radius-large;
+
+@zindex-tooltip: 1000;
+//** Tooltip max width
+@tooltip-max-width: 200px;
+//** Tooltip text color
+//@tooltip-color:               #fff;
+//** Tooltip background color
+@tooltip-bg: rgba(0, 0, 0, 0.9);
+@tooltip-opacity: 1;
+
+//** Tooltip arrow width
+@tooltip-arrow-width: 5px;
+//** Tooltip arrow color
+@tooltip-arrow-color: @tooltip-bg;
+
+//Small Banner
+@small-banner-base: #437af8;
+@small-banner-green: var(--theme-color-special);
+
+@banner-blue-border: var(--theme-color-secondary-tinted-22);
+@banner-blue-bg: var(--theme-color-secondary-tinted-40);
+
+//Sidebar
+@sidebar-width: 190px;
+@sidebar-sm-width: @space-base * 2 + 104px; //@icon-logo-width: 104px
+//@sidebar-bg:                    @color-text-dark;
+
+@sidebar-bg: @color-text-dark;
+@sidebar-nav-color: @white;
+@sidebar-nav-hover-color: @sidebar-nav-color;
+@sidebar-nav-hover-bg: transparent;
+@sidebar-nav-inactive-opacity: 0.5;
+@sidebar-nav-active-bg: rgba(255, 255, 255, 0.1);
+@sidebar-nav-active-color: @white;
+@sidebar-nav-active-left-border: var(--theme-color-primary);
+
+@sidebar-btn-color: @sidebar-nav-color;
+@sidebar-btn-inactive-opacity: @sidebar-nav-inactive-opacity;
+
+//Right Sidebar
+@right-sidebar-color: #98a4b0;
+@right-sidebar-width: 190px;
+@right-sidebar-bg: @color-text-dark;
+
+//Interaction panel
+@int-panel-width: 682px;
+@int-panel-gutter: @space-large;
+
+//Header
+//@header-color:                    @color-text-dark;
+//@sub-header-color:                lighten(@color-text-dark, 3.8%);
+//@header-badge-color:              @color-primary;
+//@header-links-color:               @white;
+@header-height: 72px;
+@header-height-sm: @component-large-height;
+@header-zip-line-height-sm: 40px;
+@header-main-line-height: 44px;
+@header-menu-toggle: 24px;
+@header-has-white-background: false;
+
+@sub-header-badge-bg-color: var(--theme-color-header-badge);
+@sub-header-badge-color: @white;
+
+//SH mobile header
+@sh-header-sm-bg: @sidebar-bg;
+@sh-header-sm-color: @white;
+
+//Footer
+@footer-space-top: @space-extra-large;
+@footer-bottom-height: @component-large-height + 1;
+//@footer-bg-color:                 @gray-extra-dark;
+//@footer-color:                    #aaaaaa;
+@footer-link-hover-color: var(--theme-color-footer-darkened-10);
+
+//Mobile Bottom Menu
+@mobile-bottom-menu-height: @space-56;
+
+// Product search components
+@filled-input-color: @gray-bg;
+
+//Browse Products components
+@browse-products-active-bg: #ecf5fb;
+
+//Text index
+@text-index-smallest-top: 2px;
+@text-index-smallest-bottom: 3px;
+@text-index-smallest-top-md: 3px;
+@text-index-smallest-bottom-md: 4px;
+
+@text-index-extra-small-top: 2px;
+@text-index-extra-small-bottom: 3px;
+@text-index-extra-small-top-md: 4px;
+@text-index-extra-small-bottom-md: 5px;
+
+@text-index-small-top: 3px;
+@text-index-small-bottom: 3px;
+@text-index-small-top-md: 4px;
+@text-index-small-bottom-md: 5px;
+
+@text-index-base-top: 3px;
+@text-index-base-bottom: 4px;
+@text-index-base-top-md: 4px;
+@text-index-base-bottom-md: 6px;
+
+@text-index-18-top: 4px;
+@text-index-18-bottom: 4px;
+@text-index-18-top-md: 6px;
+@text-index-18-bottom-md: 6px;
+
+@text-index-medium-top: 4px;
+@text-index-medium-bottom: 5px;
+@text-index-medium-top-md: 7px;
+@text-index-medium-bottom-md: 7px;
+
+@text-index-large-top: 5px;
+@text-index-large-bottom: 7px;
+@text-index-large-top-md: 9px;
+@text-index-large-bottom-md: 9px;
+
+@text-index-upper-large-top: 7px;
+@text-index-upper-large-bottom: 8px;
+@text-index-upper-large-top-md: 10px;
+@text-index-upper-large-bottom-md: 11px;
+
+@text-index-extra-large-top: 8px;
+@text-index-extra-large-bottom: 11px;
+@text-index-extra-large-top-md: 13px;
+@text-index-extra-large-bottom-md: 14px;
+
+@text-index-44-top: 9px;
+@text-index-44-bottom: 11px;
+@text-index-44-top-md: 14px;
+@text-index-44-bottom-md: 16px;
+
+@text-index-section-title-top: 9px;
+@text-index-section-title-bottom: 10px;
+
+//Modal
+@zindex-modal-background: 1040;
+@zindex-modal: 1040;
+
+//** Padding applied to the modal body
+@modal-inner-padding: @main-container-gutter;
+@modal-inner-padding-sm: @main-container-gutter-sm;
+@modal-bottom-space-sm: @space-small;
+
+//Form in modal
+@modal-form-space: @space-12;
+
+//** Padding applied to the modal title
+//@modal-title-padding:         15px;
+//** Modal title line-height
+@modal-title-line-height: @line-height-base;
+
+//** Background color of modal content area
+@modal-content-bg: #fff;
+//** Modal content border color
+@modal-content-border-color: rgba(0, 0, 0, 0.2);
+//** Modal content border color **for IE8**
+@modal-content-fallback-border-color: #999;
+
+//** Modal backdrop background color
+@modal-backdrop-bg: #000;
+//** Modal backdrop opacity
+@modal-backdrop-opacity: 0.5;
+//** Modal backdrop bottom opacity
+@modal-backdrop-bottom-opacity: 0.2;
+//** Modal header border color
+@modal-header-border-color: #e5e5e5;
+//** Modal footer border color
+@modal-footer-border-color: @modal-header-border-color;
+
+@modal-lg: 900px;
+@modal-md: 730px;
+@modal-sm: 550px;
+@modal-confirmation-wrapper: 446px;
+
+//Layout
+@order-right-panel-width: 352px;
+@order-right-panel-width-md: 308px;
+@order-right-panel-space: @order-right-panel-width + @space-base;
+@order-right-panel-space-md: @order-right-panel-width-md + @space-base;
+
+//Transition
+@transition-duration: 100ms;
+@transition-duration-base: 300ms;
+
+@main-container-gutter: @space-base;
+@main-container-gutter-sm: @space-small;
+
+// Extra small screen / phone
+@screen-xxs-min: 360px;
+
+// Extra small screen / phone
+@screen-xs-min: 480px;
+
+// Small screen / tablet
+@screen-sm-min: 768px;
+
+// Medium screen / desktop
+@screen-md-min: 1024px;
+
+// Large screen / wide desktop
+@screen-lg-min: 1140px;
+
+// Extra Large screen / wide desktop
+@screen-xl-min: 1280px;
+
+// Extra Large screen / wide desktop
+@screen-xxl-min: 1440px;
+
+// So media queries don't overlap when required, provide a maximum
+@screen-st-max: (@screen-xxs-min - 1);
+@screen-xxs-max: (@screen-xs-min - 1);
+@screen-xs-max: (@screen-sm-min - 1);
+@screen-sm-max: (@screen-md-min - 1);
+@screen-md-max: (@screen-lg-min - 1);
+@screen-lg-max: (@screen-xl-min - 1);
+@screen-xl-max: (@screen-xxl-min - 1);
+
+//== Grid system
+//
+//## Define your custom responsive grid.
+
+//** Number of columns in the grid.
+@grid-columns: 12;
+//** Padding between columns. Gets divided in half for the left and right.
+@grid-gutter-width: 24px;
+// Navbar collapse
+//** Point at which the navbar becomes uncollapsed.
+@grid-float-breakpoint: @screen-sm-min;
+//** Point at which the navbar begins collapsing.
+@grid-float-breakpoint-max: (@grid-float-breakpoint - 1);
+
+// Small screen / tablet
+@container-sm: (@screen-sm-min - @grid-gutter-width * 2);
+
+// Medium screen / desktop
+@container-md: (@screen-md-min - @grid-gutter-width * 2);
+
+// Large screen / wide desktop
+@container-lg: (@screen-lg-min - @grid-gutter-width * 2);
+
+// Large screen / wide desktop
+@container-xl: 1150px; // 1102 + 48px;
+
+@data-set-color-1: #0e84d9;
+@data-set-color-2: #5eb5f4;
+@data-set-color-3: #4eb17c;
+@data-set-color-4: #8ed6af;
+
+@circle-chart-small-size: 96px;
+@circle-chart-small-size-xs: 64px;
+@circle-chart-super-small-size: 16px;
+
+@percent-set-color-plus-20: #297003;
+@percent-set-color-plus-10: #5dac3a;
+@percent-set-color-plus-5: #86ac3a;
+@percent-set-color-0: #309fbe;
+@percent-set-color-minus-5: #e09e24;
+@percent-set-color-minus-10: #e05c24;
+@percent-set-color-minus-20: #e02424;
+
+@error-alert-bg-color: #f9e8e9;
+
+// Goose
+
+@goose-bubble-spacing: @space-base;
+@goose-bubble-size: 72px;
+
+@goose-chat-history-width: calc(290px + @space-small);
+@goose-chat-container-wide-width: 800px;
+@goose-chat-content-height: 574px;
+@goose-chat-start-content-width: 608px;
+@goose-chat-dark-color: #437af8;
+@goose-chat-box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.2);
+@goose-chat-border-radius: 16px;
+@goose-chat-message-width: 368px;
+@goose-chat-message-color: #e8f4ff;
+@goose-chat-message-ai-color: #f6f6f6;
+@goose-chat-message-border-color: #3374f1;
+@goose-chat-bg-color: #f5f9ff;
+@goose-chat-chips-height: 32px;
+@goose-chat-history-border-color: #637181;
+@goose-chat-history-bg-color: rgba(99, 113, 129, 0.1);
+@goose-chat-text-color: #222;
+@goose-chat-text-color-2: #666;
+@goose-chat-text-color-light: #72777e;
+@goose-chat-gradient: linear-gradient(91deg, #0ca7fb 0%, #4278f7 100%);
+@goose-chat-gradient-hover: linear-gradient(91deg, #4278f7 0%, #3b6cde 100%);
+@goose-chat-message-logo-size: 36px;
+@goose-chat-message-logo-size-xs: 28px;
+
+@goose-chat-voice-visualization-high-bar-color: @goose-chat-dark-color;
+@goose-chat-voice-visualization-low-bar-color: #ccc;

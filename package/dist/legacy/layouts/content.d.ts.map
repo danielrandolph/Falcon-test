@@ -1,0 +1,1 @@
+{"version":3,"file":"content.d.ts","sourceRoot":"","sources":["../../../src/legacy/layouts/content.tsx"],"names":[],"mappings":"AAAA,OAAmB,EAAE,QAAQ,EAAE,MAAM,YAAY,CAAC;AAGlD,UAAU,6BAA6B;IACrC,SAAS,CAAC,EAAE,QAAQ,CAAC;IACrB,QAAQ,CAAC,EAAE,KAAK,CAAC,SAAS,CAAC;CAC5B;AAID,eAAO,MAAM,gBAAgB,0HAU3B,CAAC;AAGH,eAAO,MAAM,cAAc,uHAY1B,CAAC;AAGF,eAAO,MAAM,OAAO;;CAElB,CAAC"}

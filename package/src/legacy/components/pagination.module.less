@@ -1,0 +1,60 @@
+@import "../../../less/variables.less";
+
+.root {
+  display: flex;
+  justify-content: center;
+  color: @color-text-base;
+}
+
+.list {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.item {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid transparent;
+  padding: 0 6px;
+  min-width: 36px;
+  height: 36px;
+  border-radius: 26px;
+  color: inherit;
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 20px;
+  cursor: pointer;
+  user-select: none;
+}
+
+.item:not(.item_active):not(.item_disabled):not(.item_ellipsis):is(
+    :hover,
+    :focus-visible
+  ) {
+  border-color: var(--theme-color-primary-tinted-40-darkened-10);
+  color: var(--theme-color-primary-darkened-10);
+}
+
+.item_active {
+  border-color: var(--theme-color-primary);
+  background-color: var(--theme-color-primary);
+  color: #fff;
+  cursor: default;
+}
+
+.item_disabled {
+  opacity: 0.2;
+  cursor: default;
+}
+
+.item_ellipsis {
+  cursor: default;
+}
+
+.itemIcon {
+  vertical-align: middle;
+  width: 24px;
+  height: 24px;
+}

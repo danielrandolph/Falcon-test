@@ -1,0 +1,47 @@
+@import "../../../less/variables.less";
+
+.root {
+  flex: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: @space-extra-small @space-12;
+  width: fit-content;
+  border-radius: @border-radius-24;
+  background-color: @color-page-bg;
+  color: @color-text-base;
+}
+
+.root_fullWidth {
+  flex: 1;
+  justify-content: start;
+  border-bottom: 1px solid @border-color;
+  padding: @space-12 @space-small 11px @space-small;
+  width: 100%;
+  border-radius: 0;
+}
+
+.text {
+  font-weight: 500;
+  font-size: 13px;
+
+  .root_fullWidth & {
+    font-size: 15px;
+  }
+}
+
+.root_type_error {
+  background-color: var(--theme-color-danger-faded-8);
+  color: var(--theme-color-danger);
+}
+
+.root_type_success {
+  background-color: rgba(@success-color, 0.08);
+  color: @success-color;
+}
+
+.root_type_warning {
+  background-color: @alert-warning-bg;
+  color: @color-text-base;
+}

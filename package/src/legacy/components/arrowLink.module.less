@@ -1,0 +1,30 @@
+@import "../../../less/variables.less";
+
+.root {
+  @arrow-link-component-size: 24px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: currentColor;
+  position: relative;
+  width: @arrow-link-component-size;
+  height: @arrow-link-component-size;
+  border-radius: @border-radius-8;
+  z-index: 1;
+
+  &::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    background-color: currentColor;
+    opacity: 0.08;
+    z-index: 0;
+  }
+
+  svg {
+    position: relative;
+    z-index: 1;
+  }
+}

@@ -1,0 +1,1 @@
+{"version":3,"file":"button-cell.d.ts","sourceRoot":"","sources":["../../../../src/legacy/components/button/button-cell.tsx"],"names":[],"mappings":"AAAA,OAAmB,EAAE,QAAQ,EAAE,MAAM,YAAY,CAAC;AAElD,wBAAgB,UAAU,CAAC,EACzB,QAAQ,EACR,SAAS,GACV,EAAE;IACD,QAAQ,CAAC,EAAE,KAAK,CAAC,SAAS,CAAC;IAC3B,SAAS,CAAC,EAAE,QAAQ,CAAC;CACtB,2CAEA"}

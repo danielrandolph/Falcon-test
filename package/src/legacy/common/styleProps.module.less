@@ -1,0 +1,70 @@
+@import "../less/variables.less";
+
+// Shorthand properties must precede longhand properties
+.styleProp(alignItems, align-items);
+
+.styleProp(border, border);
+.styleProp(borderTop, border-top);
+.styleProp(borderRight, border-right);
+.styleProp(borderBottom, border-bottom);
+.styleProp(borderLeft, border-left);
+
+.styleProp(borderRadius, border-radius);
+.styleProp(display, display);
+
+.styleProp(flex, flex);
+.styleProp(flexBasis, flex-basis);
+.styleProp(flexGrow, flex-grow);
+.styleProp(flexShrink, flex-shrink);
+
+.styleProp(flexDirection, flex-direction);
+.styleProp(flexWrap, flex-wrap);
+.styleProp(fontSize, font-size);
+.styleProp(fontWeight, font-weight);
+
+.styleProp(gap, gap);
+.styleProp(columnGap, column-gap);
+.styleProp(rowGap, row-gap);
+
+.styleProp(gridTemplateColumns, grid-template-columns);
+.styleProp(justifyContent, justify-content);
+.styleProp(lineHeight, line-height);
+
+.styleProp(margin, margin);
+.styleProp(marginTop, margin-top);
+.styleProp(marginRight, margin-right);
+.styleProp(marginBottom, margin-bottom);
+.styleProp(marginLeft, margin-left);
+
+.styleProp(padding, padding);
+.styleProp(paddingTop, padding-top);
+.styleProp(paddingRight, padding-right);
+.styleProp(paddingBottom, padding-bottom);
+.styleProp(paddingLeft, padding-left);
+
+@breakpoints: xl lg md sm xs xxs;
+
+// `!important` is used here to make sure style props behave more like inline
+// styles, overriding styles from normal CSS modules, otherwise it is dependent
+// on the order in which CSS has been loaded, which can be a source of issues.
+.styleProp(@class, @property) {
+  .@{class}_default {
+    @{property}: e(%("var(--%d-default)", @property)) !important;
+  }
+
+  each(@breakpoints, .(@breakpoint, @i) {
+    .@{class}_@{breakpoint} {
+      @max-width-variable: e(%("screen-%d-max", @breakpoint));
+
+      @media (max-width: @@max-width-variable) {
+        @{property}: e(%("var(--%d-%d)", @property, @breakpoint)) !important;
+      }
+    }
+  });
+
+  @media print {
+    .@{class}_print {
+      @{property}: e(%("var(--%d-print)", @property)) !important;
+    }
+  }
+}

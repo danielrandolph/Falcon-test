@@ -1,0 +1,1 @@
+{"version":3,"file":"commentsBanner.d.ts","sourceRoot":"","sources":["../../../src/legacy/components/commentsBanner.tsx"],"names":[],"mappings":"AAIA,OAAO,EAAE,UAAU,EAAE,MAAM,sBAAsB,CAAC;AAkClD,QAAA,MAAM,qBAAqB;gBAxBX,MAAM;kBACJ,KAAK,CAAC,SAAS;SACxB,UAAU;gBACH,MAAM;kDAqBkC,CAAC;AAEzD,OAAO,EAAE,qBAAqB,IAAI,cAAc,EAAE,CAAC"}

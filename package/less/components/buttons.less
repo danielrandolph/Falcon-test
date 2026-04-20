@@ -1,0 +1,446 @@
+// Base styles
+// --------------------------------------------------
+.btn {
+  display: inline-block;
+  margin-bottom: 0; // For input.btn
+  font-weight: @btn-font-weight;
+  text-align: center;
+  vertical-align: middle;
+  touch-action: manipulation;
+  cursor: pointer;
+  background-image: none; // Reset unusual Firefox-on-Android default style; see https://github.com/necolas/normalize.css/issues/214
+  white-space: nowrap;
+  outline: none;
+  padding-left: @space-base;
+  padding-right: @space-base;
+  font-size: @btn-font-size;
+  .setHeight(@btn-height);
+  border-radius: @btn-border-radius;
+  user-select: none;
+
+  &:hover,
+  &:focus,
+  &.focus {
+    text-decoration: none;
+  }
+
+  &:active,
+  &.active {
+    outline: 0;
+    background-image: none;
+  }
+
+  &.disabled,
+  &[disabled],
+  fieldset[disabled] & {
+    cursor: default;
+    opacity: 0.3;
+    box-shadow: none;
+  }
+
+  a& {
+    &.disabled,
+    fieldset[disabled] & {
+      pointer-events: none; // Future-proof disabling of clicks on `<a>` elements
+    }
+  }
+
+  .btn-icon-container {
+    display: table;
+    margin-left: auto;
+    margin-right: auto;
+
+    .btn-cell {
+      vertical-align: middle;
+      display: table-cell;
+
+      + .btn-cell {
+        padding-left: @space-extra-small;
+      }
+
+      @media (max-width: @screen-xxs-max) {
+        &.hidden-xxs {
+          + .btn-cell {
+            padding-left: 0;
+          }
+        }
+      }
+    }
+
+    .icon,
+    .label {
+      display: block;
+    }
+
+    .icon-tag,
+    .icon-tag-2,
+    .icon-comment,
+    .icon-pin,
+    .icon-pack-mobile-app-menu {
+      width: 20px;
+      height: 20px;
+    }
+
+    .loading-component {
+      padding-top: 0;
+      padding-bottom: 0;
+
+      .loader {
+        @this-size: @space-base;
+        width: @this-size;
+        height: @this-size;
+
+        .circular {
+          display: block;
+        }
+
+        .path {
+          stroke: @white;
+        }
+      }
+    }
+
+    &.btn-icon-container--icon-small {
+      .icon {
+        width: 18px;
+        height: 18px;
+      }
+    }
+
+    @media (max-width: @screen-sm-max) {
+      &.btn-icon-container--icon-small-sm {
+        .icon {
+          width: 18px;
+          height: 18px;
+        }
+      }
+    }
+  }
+
+  .icon {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+.btn-file {
+  position: relative;
+  overflow: hidden;
+  line-height: @component-base-height;
+
+  input {
+    cursor: pointer;
+    position: absolute;
+    width: 300px;
+    top: 0;
+    left: -150px;
+    right: 0;
+    bottom: 0;
+    opacity: 0;
+  }
+}
+
+.btn-icon {
+  padding-left: 0;
+  padding-right: 0;
+
+  .icon {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  &.btn-small,
+  &.btn--size-24,
+  &.btn--size-24-xxs,
+  &.btn--size-24-xs,
+  &.btn--size-24-sm,
+  &.btn--size-24-md,
+  &.btn--size-24-lg,
+  &.btn--size-24-xl {
+    .icon {
+      width: @space-small;
+      height: @space-small;
+    }
+  }
+}
+
+.btn-min-width {
+  min-width: 113px;
+}
+
+.btn-fix-width {
+  width: 145px;
+  padding-left: 0;
+  padding-right: 0;
+  text-align: center;
+}
+
+.btn-min-width-large {
+  min-width: 206px;
+}
+
+// Button Height
+// --------------------------------------------------
+.setHeight(@value) {
+  .this-styles(@value) {
+    height: @value;
+    line-height: @value;
+    &.btn-file {
+      line-height: @value;
+      height: @value;
+    }
+    &.btn-border-view,
+    &.btn-select-view {
+      line-height: @value - 2;
+    }
+    &.btn-icon {
+      width: @value;
+      height: @value;
+    }
+  }
+  .this-styles(@value);
+  @media (max-width: @screen-xs-max) {
+    &--xs {
+      .this-styles(@value) !important;
+    }
+  }
+}
+
+.btn-large {
+  font-size: @fz-medium;
+  .setHeight(@btn-large-height);
+}
+
+.btn-medium {
+  .setHeight(@btn-medium-height);
+}
+
+.btn-base {
+  .setHeight(@btn-height) !important;
+}
+
+.btn-height-32 {
+  .setHeight(32px);
+}
+
+.btn-small {
+  .setHeight(@btn-small);
+}
+
+// Button Gutters
+// --------------------------------------------------
+.btn-gutter-gen(@space) {
+  padding-left: @space;
+  padding-right: @space;
+  &--xs {
+    @media (max-width: @screen-xs-max) {
+      padding-left: @space;
+      padding-right: @space;
+    }
+  }
+}
+
+.btn-gutter-none {
+  .btn-gutter-gen(0);
+}
+
+.btn-gutter-extra-small {
+  .btn-gutter-gen(@space-extra-small);
+}
+
+.btn-gutter-12 {
+  .btn-gutter-gen(@space-12);
+}
+
+.btn-gutter-small {
+  .btn-gutter-gen(@space-small);
+}
+
+.btn-gutter-base {
+  .btn-gutter-gen(@space-base);
+}
+
+.btn-gutter-medium {
+  .btn-gutter-gen(@space-medium);
+}
+
+.btn-gutter-large {
+  .btn-gutter-gen(@space-large);
+}
+
+// Alternate buttons
+// --------------------------------------------------
+.btn-orange, // .btn-orange is deprecated
+.btn-primary {
+  &:extend(.button-colors all);
+
+  --btn-background: var(--theme-color-primary);
+  --btn-background-hover: var(--theme-color-primary-darkened-10);
+  --btn-color: #fff;
+
+  --btn-outline-border: var(--theme-color-primary-tinted-40);
+  --btn-outline-border-hover: var(--theme-color-primary-tinted-40-darkened-10);
+  --btn-outline-background: #fff;
+  --btn-outline-color: var(--theme-color-primary);
+  --btn-outline-color-hover: var(--theme-color-primary-darkened-10);
+}
+
+.btn-default, // .btn-default is deprecated
+.btn-secondary {
+  &:extend(.button-colors all);
+
+  --btn-background: var(--theme-color-secondary);
+  --btn-background-hover: var(--theme-color-secondary-darkened-10);
+  --btn-color: #fff;
+
+  --btn-outline-border: var(--theme-color-secondary-tinted-40);
+  --btn-outline-border-hover: var(
+    --theme-color-secondary-tinted-40-darkened-10
+  );
+  --btn-outline-background: #fff;
+  --btn-outline-color: var(--theme-color-secondary);
+  --btn-outline-color-hover: var(--theme-color-secondary-darkened-10);
+}
+
+.btn-green, // .btn-green is deprecated
+.btn-special {
+  &:extend(.button-colors all);
+
+  --btn-background: var(--theme-color-special);
+  --btn-background-hover: var(--theme-color-special-darkened-10);
+  --btn-color: #fff;
+
+  --btn-outline-border: var(--theme-color-special);
+  --btn-outline-border-hover: var(--theme-color-special-darkened-10);
+  --btn-outline-background: #fff;
+  --btn-outline-color: var(--theme-color-special);
+  --btn-outline-color-hover: var(--theme-color-special-darkened-10);
+}
+
+.btn-success {
+  .button-variant(@success-color; @success-color; @green-light-bg; @green-light-bg; @border-color; @green-light-bg;);
+
+  &.disabled,
+  &[disabled],
+  fieldset[disabled] & {
+    opacity: 1 !important;
+
+    &:hover {
+      color: @success-color;
+    }
+  }
+}
+
+.btn-warning {
+  .button-variant(@btn-warning-color; @btn-warning-bg; @btn-warning-bg; @btn-warning-hover; @btn-warning-border; @btn-warning-bv-bg;);
+}
+
+.btn-red, // .btn-red is deprecated
+.btn-danger {
+  &:extend(.button-colors all);
+
+  --btn-background: var(--theme-color-danger);
+  --btn-background-hover: var(--theme-color-danger-darkened-10);
+  --btn-color: #fff;
+
+  --btn-outline-border: var(--theme-color-danger-tinted-40);
+  --btn-outline-border-hover: var(--theme-color-danger-tinted-40-darkened-10);
+  --btn-outline-background: #fff;
+  --btn-outline-color: var(--theme-color-danger);
+  --btn-outline-color-hover: var(--theme-color-danger-darkened-10);
+}
+
+.btn-marketing-blue {
+  &:extend(.button-colors all);
+
+  --btn-background: @btn-marketing-blue-bg;
+  --btn-background-hover: @btn-marketing-blue-hover;
+  --btn-color: @btn-marketing-blue-color;
+
+  --btn-outline-border: var(--theme-color-secondary-tinted-40);
+  --btn-outline-border-hover: var(
+    --theme-color-secondary-tinted-40-darkened-10
+  );
+  --btn-outline-background: @btn-marketing-blue-bv-bg;
+  --btn-outline-color: @btn-marketing-blue-bg;
+  --btn-outline-color-hover: darken(@btn-marketing-blue-bg, 10%);
+}
+
+.btn-marketing-green {
+  &:extend(.button-colors all);
+
+  --btn-background: @btn-marketing-green-bg;
+  --btn-background-hover: @btn-marketing-green-hover;
+  --btn-color: @btn-marketing-green-color;
+
+  --btn-outline-border: var(--theme-color-secondary-tinted-40);
+  --btn-outline-border-hover: var(
+    --theme-color-secondary-tinted-40-darkened-10
+  );
+  --btn-outline-background: @btn-marketing-green-bv-bg;
+  --btn-outline-color: @btn-marketing-green-bg;
+  --btn-outline-color-hover: darken(@btn-marketing-green-bg, 10%);
+}
+
+.btn-gray {
+  .button-variant(@btn-gray-color; @color-text-base; @btn-gray-bg; @btn-gray-hover; @btn-gray-border; @btn-gray-bv-bg;);
+}
+
+.btn-dark-gray {
+  .button-variant(@btn-dark-gray-color; @btn-dark-gray-bg; @btn-dark-gray-bg; @btn-dark-gray-hover; @btn-dark-gray-border; @btn-dark-gray-bv-bg;);
+}
+
+.btn-jd-green {
+  .button-variant(@btn-jd-green-color; @btn-jd-green-bg; @btn-jd-green-bg; @btn-jd-green-hover; @btn-jd-green-border; @btn-jd-green-bv-bg;);
+}
+
+.btn-corteva {
+  .button-variant(@btn-corteva-color; @btn-corteva-bg; @btn-corteva-bg; @btn-corteva-hover; @btn-corteva-border; @btn-corteva-bv-bg;);
+}
+
+.btn-rabo {
+  .button-variant(@btn-rabo-color; @btn-rabo-bg; @btn-rabo-bg; @btn-rabo-hover; @btn-rabo-border; @btn-rabo-bv-bg;);
+}
+
+.btn-farmop {
+  .button-variant(@btn-farmop-color; @btn-farmop-bg; @btn-farmop-bg; @btn-farmop-hover; @btn-farmop-border; @btn-farmop-bv-bg;);
+}
+
+.btn-goose {
+  .button-variant(@btn-goose-color; @btn-goose-bg; @btn-goose-bg; @btn-goose-hover; @btn-goose-border; @btn-goose-bv-bg;);
+
+  &.btn-gradient {
+    background: @goose-chat-gradient;
+    color: @white;
+
+    &:hover {
+      background: @goose-chat-gradient-hover;
+    }
+  }
+}
+
+.btn-border--none {
+  border-color: transparent !important;
+}
+
+.add-link-color(@color; @color-hover) {
+  color: @color;
+  @media (hover: hover) {
+    &:not([disabled]):not(.btn):hover {
+      color: @color-hover;
+      text-decoration: none;
+    }
+  }
+  @media (hover: none) {
+    &:not([disabled]):not(.btn):active {
+      color: @color-hover;
+      text-decoration: none;
+    }
+  }
+}
+
+.link-color {
+  .add-link-color(@control-color-link; @control-color-link-hover);
+}

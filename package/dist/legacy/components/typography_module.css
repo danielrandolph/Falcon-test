@@ -1,0 +1,32 @@
+.root-tpT7_d {
+  margin: 0;
+}
+
+.color_dark-JsOd6U {
+  color: #111;
+}
+
+.color_base-DERILL {
+  color: #444;
+}
+
+.color_light-f93QfM {
+  color: #888;
+}
+
+.color_alert-cRtG_x {
+  color: var(--theme-color-danger);
+}
+
+.color_link-O7CwZ6 {
+  color: var(--theme-color-link);
+}
+
+.color_primary-w9GuHm {
+  color: var(--theme-color-primary);
+}
+
+.color_success-aR8W8O {
+  color: #5dac3a;
+}
+

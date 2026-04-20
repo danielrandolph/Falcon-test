@@ -1,0 +1,28 @@
+@import "tailwindcss/theme.css" prefix(tw);
+@import "tailwindcss/utilities.css" prefix(tw);
+
+@plugin "tailwindcss-react-aria-components";
+@plugin "tailwindcss-animate";
+
+::view-transition-new(.toast):only-child {
+  animation: slide-in 400ms;
+}
+
+::view-transition-old(.toast):only-child {
+  animation: slide-out 400ms forwards;
+}
+
+@keyframes slide-out {
+  to {
+    translate: 100% 0;
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
+@keyframes slide-in {
+  from {
+    translate: 100% 0;
+    opacity: 0;
+  }
+}

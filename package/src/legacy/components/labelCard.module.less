@@ -1,0 +1,64 @@
+@import "../../../less/variables.less";
+
+.root {
+  display: flex;
+  gap: @space-12;
+  padding: @space-small;
+  border-radius: @border-radius-8;
+  color: @color-text-base;
+}
+
+.root_variant_blue {
+  background: @blue-50;
+  color: @blue-700;
+}
+
+.root_variant_green {
+  background: @green-50;
+  color: @green-700;
+}
+
+.root_variant_neutral {
+  background: @message-box-gray-bg;
+}
+
+.root_variant_purple {
+  background: @purple-50;
+  color: @purple-700;
+}
+
+.root_variant_red {
+  background: @red-50;
+  color: @red-700;
+}
+
+.root_variant_yellow {
+  background: @yellow-50;
+  color: @yellow-700;
+}
+
+.icon {
+  flex: none;
+  width: @space-20;
+  height: @space-20;
+}
+
+.text {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  gap: @space-4;
+}
+
+.title {
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 20px;
+}
+
+.description {
+  color: @color-text-base;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 20px;
+}

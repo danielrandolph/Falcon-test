@@ -1,0 +1,132 @@
+@import "../../../less/variables.less";
+
+.root {
+  border: 1px solid rgba(17, 17, 17, 0.12);
+  padding: 16px;
+  border-radius: 8px;
+}
+
+.root_variant_error {
+  background: var(--theme-color-danger-faded-8);
+}
+
+.root_variant_neutral {
+  background: @message-box-gray-bg;
+}
+
+.root_variant_success {
+  background: rgba(@success-color, 0.08);
+}
+
+.root_variant_warning {
+  background: @alert-warning-bg;
+}
+
+.inner {
+  position: relative;
+  display: flex;
+  gap: 16px;
+  align-items: center;
+
+  @media (max-width: @screen-xs-max) {
+    display: grid;
+    gap: 12px;
+    align-items: start;
+    grid-template-columns: auto 1fr;
+  }
+}
+
+.content {
+  flex: 1 1 min-content;
+  display: flex;
+  gap: 12px;
+
+  @media (max-width: @screen-xs-max) {
+    display: contents;
+  }
+}
+
+.icon {
+  width: 1em;
+  height: 1em;
+  overflow: hidden;
+  font-size: 20px;
+
+  @media (min-width: @screen-sm-min) {
+    .root_size_large & {
+      font-size: 24px;
+    }
+  }
+
+  .root_variant_error & {
+    color: var(--theme-color-danger);
+  }
+
+  .root_variant_neutral & {
+    color: @color-text-base;
+  }
+
+  .root_variant_success & {
+    color: @color-success;
+  }
+
+  .root_variant_warning & {
+    color: @color-text-dark;
+  }
+}
+
+.partnerLogo {
+  width: 40px;
+  height: 40px;
+  overflow: hidden;
+
+  @media (min-width: @screen-sm-min) {
+    align-self: center;
+  }
+}
+
+.icon,
+.partnerLogo {
+  @media (max-width: @screen-xs-max) {
+    grid-row: span 2;
+  }
+}
+
+.text {
+  flex: 1 1 min-content;
+  align-self: center;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.title {
+  color: @color-text-dark;
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 20px;
+
+  @media (min-width: @screen-sm-min) {
+    .root_size_large & {
+      font-size: 18px;
+      line-height: 24px;
+    }
+  }
+}
+
+.description {
+  color: @color-text-base;
+  font-size: 15px;
+  line-height: 20px;
+}
+
+.buttons {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+  flex-wrap: wrap;
+
+  @media (max-width: @screen-xs-max) {
+    gap: 12px;
+  }
+}

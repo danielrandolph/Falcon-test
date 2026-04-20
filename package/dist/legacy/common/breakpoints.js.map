@@ -1,0 +1,1 @@
+{"version":3,"file":"legacy/common/breakpoints.js","sources":["webpack://@falcon/ui-kit/./src/legacy/common/breakpoints.ts"],"sourcesContent":["export const breakpoints = [\"xxs\", \"xs\", \"sm\", \"md\", \"lg\", \"xl\"] as const;\nexport type Breakpoint = (typeof breakpoints)[number];\n"],"names":["breakpoints"],"mappings":"AAAO,MAAMA,cAAc;IAAC;IAAO;IAAM;IAAM;IAAM;IAAM;CAAK"}

@@ -1,0 +1,27 @@
+.root-v_b9f8 {
+  color: currentColor;
+  z-index: 1;
+  border-radius: 8px;
+  justify-content: center;
+  align-items: center;
+  width: 24px;
+  height: 24px;
+  display: flex;
+  position: relative;
+}
+
+.root-v_b9f8:before {
+  content: "";
+  border-radius: inherit;
+  opacity: .08;
+  z-index: 0;
+  background-color: currentColor;
+  position: absolute;
+  inset: 0;
+}
+
+.root-v_b9f8 svg {
+  z-index: 1;
+  position: relative;
+}
+

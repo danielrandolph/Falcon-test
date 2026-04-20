@@ -1,0 +1,50 @@
+@import "../../../less/variables.less";
+
+.root {
+  display: flex;
+  gap: 12px;
+  align-items: start;
+  border: 1px solid rgba(17, 17, 17, 0.12);
+  padding: 16px;
+  border-radius: 8px;
+  background: @alert-warning-bg;
+}
+
+.icon {
+  width: 20px;
+  height: 20px;
+  color: @color-text-dark;
+}
+
+.text {
+  flex: 1 1 min-content;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.titleAndTimeStamp {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+
+.title {
+  flex: 1 1 min-content;
+  color: @color-text-dark;
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 20px;
+}
+
+.timeStamp {
+  color: @color-gray;
+  font-size: 13px;
+  line-height: 18px;
+}
+
+.description {
+  color: @color-text-base;
+  font-size: 13px;
+  line-height: 1.2;
+}

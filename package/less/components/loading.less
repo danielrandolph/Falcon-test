@@ -1,0 +1,144 @@
+.loading-component {
+  text-align: center;
+  padding-top: @space-large;
+  padding-bottom: @space-large;
+
+  .loader-label {
+    font-size: @fz-medium;
+    color: @color-text-base;
+    font-weight: 500;
+    margin-top: @space-large;
+  }
+
+  &.loading-component--center {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+.loading-inline {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding-top: 0;
+  padding-bottom: 0;
+
+  &.loading-inline--base {
+    padding-top: (@component-base-height - @space-base)/2;
+    padding-bottom: (@component-base-height - @space-base)/2;
+
+    .loader {
+      @this-size: @space-base;
+      width: @this-size;
+      height: @this-size;
+    }
+
+    .loader-label {
+      font-size: @fz-base;
+      margin-left: @space-12;
+    }
+  }
+
+  &.loading-center {
+    justify-content: center;
+  }
+
+  &.loading-right {
+    justify-content: flex-end;
+  }
+
+  &.loading-inline--extra-height {
+    padding-top: 10px;
+    padding-bottom: 9px;
+  }
+
+  .loader {
+    @this-size: @component-medium-height;
+    width: @this-size;
+    height: @this-size;
+    margin-left: 0;
+    margin-right: 0;
+
+    &,
+    .circular {
+      display: block;
+    }
+  }
+
+  .loader-label {
+    margin-top: 0;
+    margin-left: @space-base;
+  }
+}
+
+.loader {
+  @width: 70px;
+  position: relative;
+  margin: 0 auto;
+  width: @width;
+
+  .circular {
+    animation: rotate 2s linear infinite;
+    transform-origin: center center;
+    margin: auto;
+    width: 100%;
+  }
+
+  .path {
+    stroke-dasharray: 1, 200;
+    stroke-dashoffset: 0;
+    animation:
+      dash 1.5s ease-in-out infinite,
+      color 6s ease-in-out infinite;
+    stroke-linecap: round;
+    stroke: var(--theme-color-primary);
+  }
+
+  @keyframes rotate {
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+
+  @keyframes dash {
+    0% {
+      stroke-dasharray: 1, 200;
+      stroke-dashoffset: 0;
+    }
+    50% {
+      stroke-dasharray: 89, 200;
+      stroke-dashoffset: -35px;
+    }
+    100% {
+      stroke-dasharray: 89, 200;
+      stroke-dashoffset: -124px;
+    }
+  }
+}
+
+.loader-extra-small {
+  @this-size: 16px;
+  width: @this-size;
+
+  .circular {
+    display: block;
+    width: @this-size;
+    height: @this-size;
+  }
+
+  .path {
+    stroke: @color-gray;
+  }
+
+  &.loader--btn {
+    @this-size: 24px;
+    width: @this-size;
+    .circular {
+      width: @this-size -4px;
+      height: @this-size -4px;
+    }
+    .path {
+      stroke: currentColor;
+    }
+  }
+}

@@ -1,0 +1,1 @@
+{"version":3,"file":"label.d.ts","sourceRoot":"","sources":["../../../src/legacy/components/label.tsx"],"names":[],"mappings":"AAGA,wBAAgB,KAAK,CAAC,EACpB,SAAS,EACT,IAAI,EACJ,OAAmB,GACpB,EAAE;IACD,SAAS,CAAC,EAAE,MAAM,CAAC;IACnB,IAAI,EAAE,MAAM,CAAC;IACb,OAAO,CAAC,EAAE,OAAO,GAAG,QAAQ,GAAG,SAAS,GAAG,KAAK,GAAG,QAAQ,GAAG,MAAM,CAAC;CACtE,2CAmBA"}

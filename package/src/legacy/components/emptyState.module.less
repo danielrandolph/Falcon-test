@@ -1,0 +1,78 @@
+@import "../../../less/variables.less";
+
+.root {
+  padding: @space-large @space-base;
+
+  @media (max-width: @screen-xs-max) {
+    border-inline: 0;
+    padding-inline: @space-small;
+    border-radius: 0;
+  }
+}
+
+.root_border {
+  border: @default-border;
+  border-radius: @border-radius-8;
+  background: @white;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  max-width: 600px;
+  margin-inline: auto;
+}
+
+.icon {
+  margin-inline: auto;
+  width: 1em;
+  height: 1em;
+  color: var(--theme-color-primary);
+  font-size: 112px;
+
+  @media (max-width: @screen-xs-max) {
+    font-size: 56px;
+  }
+}
+
+.title,
+.subtext,
+.extraInfo {
+  &:not(:first-child) {
+    margin-top: @space-small;
+  }
+}
+
+.title {
+  color: @color-text-dark;
+  font-weight: 500;
+  font-size: @fz-upper-large;
+  line-height: 43px;
+  text-align: center;
+
+  @media (max-width: @screen-xs-max) {
+    font-size: @fz-large;
+    line-height: 35px;
+  }
+
+  .root_smallTitle & {
+    font-size: @fz-medium;
+    line-height: 27px;
+  }
+}
+
+.subtext {
+  color: @color-text-base;
+  font-weight: 400;
+  font-size: @fz-18;
+  line-height: 24px;
+  text-align: center;
+}
+
+.buttons {
+  text-align: center;
+
+  &:not(:first-child) {
+    margin-top: @space-base;
+  }
+}

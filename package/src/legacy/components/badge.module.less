@@ -1,0 +1,72 @@
+@import "../less/variables.less";
+
+.root {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  --falcon-badge-position-offset: 35%;
+}
+
+.root:not(.root_inline) {
+  position: relative;
+}
+
+.root_inline {
+  // This is necessary to vertically size a container according to surrounding
+  // text.
+  //
+  // Pseudo-elements are sized based on naturally inherited font styles, while
+  // for the circle itself we change the font size, line height, etc.
+  &::before,
+  &::after {
+    content: "\a0";
+    width: 0;
+    overflow: hidden;
+  }
+}
+
+.root_variant_danger {
+  --falcon-badge-background-color: @btn-red-bg;
+  --falcon-badge-color: @btn-red-color;
+}
+
+.root_variant_info {
+  --falcon-badge-background-color: @border-color;
+  --falcon-badge-color: @color-text-base;
+}
+
+.circle {
+  --falcon-badge-size: 20px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding-inline: 3px;
+  min-width: var(--falcon-badge-size);
+  height: var(--falcon-badge-size);
+  outline: 2px solid var(--falcon-badge-outline-color, transparent);
+  border-radius: var(--falcon-badge-size);
+  background-color: var(--falcon-badge-background-color);
+  color: var(--falcon-badge-color);
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1;
+  white-space: nowrap;
+
+  .root_size_small & {
+    --falcon-badge-size: 16px;
+  }
+
+  &:empty {
+    --falcon-badge-size: 12px;
+  }
+
+  .root:not(.root_inline) & {
+    position: absolute;
+    top: 0;
+    right: 0;
+    transform: translate(
+      var(--falcon-badge-position-offset),
+      calc(-1 * var(--falcon-badge-position-offset))
+    );
+  }
+}

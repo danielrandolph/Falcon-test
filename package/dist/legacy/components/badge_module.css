@@ -1,0 +1,60 @@
+.root-YZ2B50 {
+  --falcon-badge-position-offset: 35%;
+  justify-content: center;
+  align-items: center;
+  display: inline-flex;
+}
+
+.root-YZ2B50:not(.root_inline-AnCqVb) {
+  position: relative;
+}
+
+.root_inline-AnCqVb:before, .root_inline-AnCqVb:after {
+  content: " ";
+  width: 0;
+  overflow: hidden;
+}
+
+.root_variant_danger-vzVxF5 {
+  --falcon-badge-background-color: var(--theme-color-danger);
+  --falcon-badge-color: #fff;
+}
+
+.root_variant_info-LBVlLX {
+  --falcon-badge-background-color: #e2e2e2;
+  --falcon-badge-color: #444;
+}
+
+.circle-znN8S0 {
+  --falcon-badge-size: 20px;
+  min-width: var(--falcon-badge-size);
+  height: var(--falcon-badge-size);
+  outline: 2px solid var(--falcon-badge-outline-color, transparent);
+  border-radius: var(--falcon-badge-size);
+  background-color: var(--falcon-badge-background-color);
+  color: var(--falcon-badge-color);
+  white-space: nowrap;
+  justify-content: center;
+  align-items: center;
+  padding-inline: 3px;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 1;
+  display: inline-flex;
+}
+
+.root_size_small-rsOIz_ .circle-znN8S0 {
+  --falcon-badge-size: 16px;
+}
+
+.circle-znN8S0:empty {
+  --falcon-badge-size: 12px;
+}
+
+.root-YZ2B50:not(.root_inline-AnCqVb) .circle-znN8S0 {
+  transform: translate(var(--falcon-badge-position-offset), calc(-1 * var(--falcon-badge-position-offset)));
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+

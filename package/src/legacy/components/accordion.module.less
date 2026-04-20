@@ -1,0 +1,79 @@
+@import "../../../less/variables.less";
+
+.root {
+  overflow: hidden;
+  border: @default-border;
+  border-radius: @border-radius-8;
+
+  &:focus-visible {
+    outline: none;
+  }
+}
+
+.header {
+  cursor: pointer;
+
+  &:focus-visible {
+    outline: none;
+  }
+
+  .root[open] & {
+    border-bottom: @default-border;
+  }
+}
+
+.headerToggleIcon {
+  width: 16px;
+  height: 16px;
+  color: @control-color-link;
+
+  .header:hover & {
+    color: @control-color-link-hover;
+  }
+}
+
+.accordion-bg-themes(@header-bg, @body-bg) {
+  .header {
+    background-color: @header-bg;
+  }
+
+  .body {
+    background-color: @body-bg;
+  }
+}
+
+.root_white {
+  .accordion-bg-themes(@white, @white);
+}
+
+.root_neutral {
+  .accordion-bg-themes(@color-page-bg, @color-page-bg);
+}
+
+.root_neutralInactive {
+  .accordion-bg-themes(@gray-bg, @gray-bg);
+}
+
+.root_whiteHeaderNeutralBody {
+  .accordion-bg-themes(@white, @color-page-bg);
+}
+
+.root_whiteHeaderNeutralInactiveBody {
+  .accordion-bg-themes(@white, @gray-bg);
+}
+
+.root_neutralHeaderWhiteBody {
+  .accordion-bg-themes(@color-page-bg, @white);
+}
+
+.root_neutralInactiveHeaderWhiteBody {
+  .accordion-bg-themes(@gray-bg, @white);
+}
+
+.root_neutralHeaderNeutralInactiveBody {
+  .accordion-bg-themes(@color-page-bg, @gray-bg);
+}
+
+.root_neutralInactiveHeaderNeutralBody {
+  .accordion-bg-themes(@gray-bg, @color-page-bg);
+}

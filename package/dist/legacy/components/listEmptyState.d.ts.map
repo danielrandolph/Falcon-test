@@ -1,0 +1,1 @@
+{"version":3,"file":"listEmptyState.d.ts","sourceRoot":"","sources":["../../../src/legacy/components/listEmptyState.tsx"],"names":[],"mappings":"AAGA,OAAO,EAAE,UAAU,EAAE,MAAM,sBAAsB,CAAC;AAqDlD,QAAA,MAAM,qBAAqB;aA1Cd,OAAO;gBACJ,MAAM;sBACA,OAAO;gBACb,MAAM;SACb,UAAU;qBACE,MAAM,IAAI;kDAqCyB,CAAC;AAEzD,OAAO,EAAE,qBAAqB,IAAI,cAAc,EAAE,CAAC"}

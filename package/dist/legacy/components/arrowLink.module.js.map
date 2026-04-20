@@ -1,0 +1,1 @@
+{"version":3,"file":"legacy/components/arrowLink.module.js","sources":["webpack://@falcon/ui-kit/./src/legacy/components/arrowLink.module.less"],"sourcesContent":["// extracted by LIB_CSS_EXTRACT_LOADER\nimport \"./arrowLink_module.css\"\nvar _1 = \"root-v_b9f8\";\nexport { _1 as \"root\" }\n"],"names":["_1"],"mappings":";AAEA,IAAIA,KAAK"}

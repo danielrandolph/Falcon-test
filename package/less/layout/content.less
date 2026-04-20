@@ -1,0 +1,140 @@
+.base-layout__content {
+  display: flex;
+  flex-direction: column;
+  padding: @space-base;
+  gap: @space-base;
+
+  @media (max-width: @screen-sm-max) {
+    padding: @space-small 0;
+    gap: @space-small;
+  }
+
+  &.base-layout__content--no-gap-pad {
+    padding-top: 0;
+    padding-bottom: 0;
+    gap: 0;
+  }
+
+  //for reset logic without Section wrapper
+  .campaigns-layout {
+    @media (max-width: @screen-xs-max) {
+      margin-left: 0 !important;
+      margin-right: 0 !important;
+    }
+  }
+}
+
+.grower-portal {
+  .base-layout__content {
+    max-width: 1150px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+.tablet-padding-left-right {
+  @media (min-width: @screen-sm-min) and (max-width: @screen-sm-max) {
+    padding-left: @space-base;
+    padding-right: @space-base;
+  }
+}
+
+.base-layout__content-section {
+  flex: 1;
+
+  &.email-builder__section {
+    @media (min-width: @screen-xs-max) and (max-width: @screen-sm-max) {
+      padding: 0 @space-base;
+    }
+  }
+
+  .filters-line {
+    @media (max-width: @screen-sm-max) {
+      padding: 0 @space-base;
+    }
+    @media (max-width: @screen-xs-max) {
+      padding: 0 @space-small;
+    }
+  }
+
+  .email-builder-controls {
+    @media (max-width: @screen-xs-max) {
+      padding-left: @space-small;
+      padding-right: @space-small;
+    }
+  }
+
+  //START: reset old Bradley styles
+  .filters-line {
+    margin-bottom: 0 !important;
+  }
+
+  .filters-line .filters-line__search {
+    margin-bottom: 0 !important;
+  }
+
+  .filters-line .filters-line__dropdowns-cell,
+  .filters-line .cell {
+    padding-bottom: 0 !important;
+  }
+
+  .partner-form,
+  .email-builder,
+  .inbox-list-wrapper {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+  }
+
+  .marketing-title-link {
+    margin-bottom: 0 !important;
+
+    @media (max-width: @screen-sm-max) {
+      margin-top: 0 !important;
+    }
+
+    @media (max-width: @screen-xs-max) {
+      padding: 0 @space-small;
+    }
+  }
+
+  .summary-block.summary-separate-items.summary-block__marketing-page:not(
+      .not-reset-style
+    ) {
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+  }
+
+  //reset minus margins in mobile
+  .statistic-info-wrapper,
+  .summary-block-wrapper,
+  .statistic-info-wrapper.attribution-statistic-info .statistic-info {
+    @media (max-width: @screen-xs-max) {
+      margin-left: 0 !important;
+      margin-right: 0 !important;
+    }
+  }
+
+  .statistic-info {
+    @media (max-width: @screen-xs-max) {
+      &:first-child {
+        margin-top: 0 !important;
+      }
+    }
+  }
+
+  .interactive-table-wrapper.interactive-table-wrapper--recipients,
+  .white-box-wrapper,
+  .interactive-table-wrapper.interactive-table-wrapper--no-bottom-border {
+    @media (max-width: @screen-sm-max) {
+      margin-left: 0 !important;
+      margin-right: 0 !important;
+    }
+  }
+
+  .statistic-info-wrapper {
+    //attribution page
+    margin-bottom: 0 !important;
+  }
+
+  //END: reset old Bradley styles
+}

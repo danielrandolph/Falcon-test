@@ -1,0 +1,151 @@
+@import "../../../less/variables.less";
+
+.root {
+  border: @default-border;
+  border-radius: @border-radius-large;
+  background: @white;
+  color: @color-text-base;
+
+  --falcon-table-placeholder-width: @space-small;
+}
+
+@media (min-width: @screen-sm-min) {
+  .root_size_regular {
+    --falcon-table-placeholder-width: @space-base;
+  }
+}
+
+.header {
+  border-bottom: @default-border;
+  padding: @space-small var(--falcon-table-placeholder-width);
+  color: @color-text-dark;
+}
+
+.scrollArea {
+  overflow: auto;
+}
+
+.table {
+  display: table;
+  width: 100%;
+}
+
+.table_fixed {
+  table-layout: fixed;
+}
+
+.head {
+  display: table-header-group;
+
+  .root_size_regular & {
+    --falcon-table-cell-padding-top: @space-base;
+    --falcon-table-cell-padding-bottom: @space-base;
+  }
+
+  .root_size_small & {
+    --falcon-table-cell-padding-top: @space-small;
+    --falcon-table-cell-padding-bottom: @space-small;
+  }
+}
+
+.body {
+  display: table-row-group;
+
+  .root_size_regular & {
+    --falcon-table-cell-padding-top: @space-20;
+    --falcon-table-cell-padding-bottom: @space-20;
+  }
+
+  .root_size_small & {
+    --falcon-table-cell-padding-top: @space-small;
+    --falcon-table-cell-padding-bottom: @space-small;
+  }
+}
+
+.row {
+  display: table-row;
+
+  &::before,
+  &::after {
+    content: "";
+    display: table-cell;
+    min-width: var(--falcon-table-placeholder-width);
+    width: var(--falcon-table-placeholder-width);
+  }
+
+  .body:not(:first-child) &:first-child {
+    &::before,
+    &::after {
+      border-top: @default-border;
+    }
+  }
+
+  > * {
+    --falcon-table-cell-padding-left: 0px;
+    --falcon-table-cell-padding-right: @space-small;
+
+    --falcon-table-cell-padding: var(--falcon-table-cell-padding-top)
+      var(--falcon-table-cell-padding-right)
+      var(--falcon-table-cell-padding-bottom)
+      var(--falcon-table-cell-padding-left);
+  }
+}
+
+.row_interactive {
+  cursor: pointer;
+}
+
+.titleCell {
+  display: table-cell;
+  vertical-align: middle;
+  padding: var(--falcon-table-cell-padding);
+  color: @color-text-dark;
+  font-weight: bold;
+  font-size: @fz-small;
+  line-height: 18px;
+  text-align: left;
+}
+
+.bodyCell {
+  position: relative;
+  display: table-cell;
+  vertical-align: middle;
+  border-top: @default-border;
+  padding: var(--falcon-table-cell-padding);
+  color: @color-text-base;
+
+  .body:first-child .row:first-child & {
+    border-top: 0;
+  }
+
+  &:any-link:any-link:hover {
+    color: @color-text-base;
+    text-decoration: none;
+  }
+}
+
+.mainCell {
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 20px;
+  text-align: left;
+
+  .row_interactive &,
+  &:any-link {
+    color: var(--theme-color-link);
+  }
+
+  .row_interactive:hover &,
+  .row:has(.bodyCell:any-link:where(:hover, :focus-visible)) &:any-link {
+    color: var(--theme-color-link-darkened-10);
+  }
+}
+
+.secondaryCell {
+  font-size: 13px;
+  line-height: 18px;
+}
+
+.emptyState {
+  border-top: @default-border;
+}

@@ -1,0 +1,138 @@
+.root-Jb2XhT {
+  border: 1px solid #1111111f;
+  border-radius: 8px;
+  padding: 16px;
+}
+
+.root_variant_error-Ke7_a7 {
+  background: var(--theme-color-danger-faded-8);
+}
+
+.root_variant_neutral-DdskjZ {
+  background: #f2f2f2;
+}
+
+.root_variant_success-w9k112 {
+  background: #5dac3a14;
+}
+
+.root_variant_warning-ukDXex {
+  background: #fffad5;
+}
+
+.inner-NWsnsg {
+  align-items: center;
+  gap: 16px;
+  display: flex;
+  position: relative;
+}
+
+@media (width <= 767px) {
+  .inner-NWsnsg {
+    grid-template-columns: auto 1fr;
+    align-items: start;
+    gap: 12px;
+    display: grid;
+  }
+}
+
+.content-vV6lKG {
+  flex: 1 1 min-content;
+  gap: 12px;
+  display: flex;
+}
+
+@media (width <= 767px) {
+  .content-vV6lKG {
+    display: contents;
+  }
+}
+
+.icon-oKm2MQ {
+  width: 1em;
+  height: 1em;
+  font-size: 20px;
+  overflow: hidden;
+}
+
+@media (width >= 768px) {
+  .root_size_large-k6hF4p .icon-oKm2MQ {
+    font-size: 24px;
+  }
+}
+
+.root_variant_error-Ke7_a7 .icon-oKm2MQ {
+  color: var(--theme-color-danger);
+}
+
+.root_variant_neutral-DdskjZ .icon-oKm2MQ {
+  color: #444;
+}
+
+.root_variant_success-w9k112 .icon-oKm2MQ {
+  color: #5dac3a;
+}
+
+.root_variant_warning-ukDXex .icon-oKm2MQ {
+  color: #111;
+}
+
+.partnerLogo-aqQiiB {
+  width: 40px;
+  height: 40px;
+  overflow: hidden;
+}
+
+@media (width >= 768px) {
+  .partnerLogo-aqQiiB {
+    align-self: center;
+  }
+}
+
+@media (width <= 767px) {
+  .icon-oKm2MQ, .partnerLogo-aqQiiB {
+    grid-row: span 2;
+  }
+}
+
+.text-e2Ts0T {
+  flex: 1 1 min-content;
+  flex-direction: column;
+  align-self: center;
+  gap: 4px;
+  display: flex;
+}
+
+.title-ZAcOE0 {
+  color: #111;
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 20px;
+}
+
+@media (width >= 768px) {
+  .root_size_large-k6hF4p .title-ZAcOE0 {
+    font-size: 18px;
+    line-height: 24px;
+  }
+}
+
+.description-Ca1NEq {
+  color: #444;
+  font-size: 15px;
+  line-height: 20px;
+}
+
+.buttons-rtIxlm {
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 16px;
+  display: flex;
+}
+
+@media (width <= 767px) {
+  .buttons-rtIxlm {
+    gap: 12px;
+  }
+}
+

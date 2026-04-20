@@ -1,0 +1,171 @@
+.svg-sprite {
+  width: 0;
+  height: 0;
+  position: absolute;
+  left: -999999px;
+}
+
+svg:where(:not(.lucide)),
+.icon {
+  .fill(currentColor);
+}
+
+.icon-pack-1-bg {
+  .fill(var(--theme-color-secondary));
+  opacity: 0.4;
+}
+
+//used for multiple projects
+.icon-pack-1-bg--orange {
+  .fill(var(--theme-color-primary));
+  opacity: 0.2;
+}
+
+//used for multiple projects
+
+//Icon Size generate mixin
+.icon-size-gen(@svg-icon-size-values);
+
+//Colors todo_falcon_rename_icon_modifiers
+
+.icon-text-dark {
+  .fill(@color-text-dark) !important;
+}
+
+.icon-text-base {
+  .fill(@color-text-base) !important;
+}
+
+.icon-gray-light,
+.icon-light-gray {
+  .fill(var(--theme-color-light-gray)) !important;
+}
+
+.icon-link {
+  .fill(var(--theme-color-link)) !important;
+}
+
+.icon-gray {
+  .fill(@color-gray) !important;
+}
+
+.icon-white {
+  .fill(@white) !important;
+}
+
+.icon-orange,
+.icon-primary {
+  .fill(var(--theme-color-primary)) !important;
+}
+
+.icon-red,
+.icon-danger {
+  .fill(var(--theme-color-danger)) !important;
+}
+
+.icon-yellow {
+  .fill(@yellow) !important;
+}
+
+.icon-green,
+.icon-special {
+  .fill(var(--theme-color-special)) !important;
+}
+
+.icon-success-color,
+.icon-success {
+  .fill(@success-color) !important;
+}
+
+.icon-blue-light,
+.icon-secondary {
+  .fill(var(--theme-color-secondary)) !important;
+}
+
+.icon-yellow {
+  .fill(@yellow) !important;
+}
+
+.icon-completed {
+  .fill(@success-color);
+}
+
+.icon-canceled {
+  .fill(var(--theme-color-danger));
+}
+
+.icon-inherit {
+  .fill(inherit) !important;
+}
+
+.icon-operator {
+  position: relative;
+  display: inline-block;
+  padding-left: 0;
+  padding-right: 0;
+  background-color: currentColor;
+  height: 20px;
+  width: 20px;
+  border-radius: 2px;
+
+  &.icon-operator--circle {
+    border-radius: 50%;
+  }
+
+  .icon {
+    position: absolute !important;
+    top: 50%;
+    left: 50%;
+    color: @white;
+    transform: translate(-50%, -50%);
+
+    &.icon-number-plus {
+      .plus-gen(@size: 10px, @line-size:2px);
+    }
+
+    &.icon-number-minus {
+      .minus-gen(@size: 10px, @line-size:2px);
+    }
+  }
+}
+
+.icon-bar {
+  display: block;
+  width: 20px;
+  height: 2px;
+  background-color: @sh-header-sm-color;
+  margin-top: 2px;
+  margin-bottom: 2px;
+}
+
+.icon-bar + .icon-bar {
+  margin-top: 5px;
+}
+
+.caret {
+  display: inline-block;
+  vertical-align: middle;
+  margin-left: 6px;
+  .triangle-gen("bottom", @triangle-width: @caret-width-base, @triangle-height:@caret-height-base);
+}
+
+.circle {
+  position: relative;
+  display: block;
+  .circle-gen;
+
+  .icon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  &.circle--red {
+    .circle-add-color(var(--theme-color-primary); @white);
+  }
+
+  &.circle--80 {
+    .circle-gen(@size: 80px);
+  }
+}
