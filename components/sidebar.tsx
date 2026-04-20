@@ -38,7 +38,7 @@ const components = [
   { name: "Dialog", href: "/components/dialog", icon: MessageSquare },
   { name: "Modal", href: "/components/modal", icon: PanelLeft },
   { name: "Toast", href: "/components/toast", icon: Bell },
-  { name: "Spinner", href: "/components/spinner", icon: Loader2 },
+  { name: "Loading", href: "/components/spinner", icon: Loader2 },
   { name: "Alert", href: "/components/alert", icon: AlertCircle },
   { name: "Tooltip", href: "/components/tooltip", icon: Info },
   { name: "Calendar", href: "/components/calendar", icon: Calendar },

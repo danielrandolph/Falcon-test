@@ -33,7 +33,7 @@ const components = [
   { name: "Dialog", href: "/components/dialog", icon: MessageSquare, description: "Dialogs and alert dialogs" },
   { name: "Modal", href: "/components/modal", icon: PanelLeft, description: "Modal overlays for focused content" },
   { name: "Toast", href: "/components/toast", icon: Bell, description: "Toast notifications for feedback" },
-  { name: "Spinner", href: "/components/spinner", icon: Loader2, description: "Loading indicators" },
+  { name: "Loading", href: "/components/spinner", icon: Loader2, description: "Loading indicators" },
   { name: "Alert", href: "/components/alert", icon: AlertCircle, description: "Alert banners for important messages" },
   { name: "Tooltip", href: "/components/tooltip", icon: Info, description: "Tooltips for additional context" },
   { name: "Calendar", href: "/components/calendar", icon: Calendar, description: "Date picking components" },

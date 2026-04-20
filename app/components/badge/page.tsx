@@ -3,7 +3,7 @@
 import { DocsLayout } from "@/components/docs-layout";
 import { ComponentPreview } from "@/components/component-preview";
 import { PropsTable } from "@/components/props-table";
-import { Badge } from "../../../package/dist/index.js";
+import { Badge } from "../../../package/dist/legacy/index.js";
 
 const badgeProps = [
   { name: "variant", type: '"default" | "secondary" | "success" | "warning" | "destructive"', default: '"default"', description: "The visual variant" },
