@@ -111,7 +111,7 @@ export default function Dashboard() {
               </TabList>
               <TabPanel id="agronomy" className="p-0">
                 {/* Stats Row */}
-                <div className="mt-6 grid gap-4 md:grid-cols-3">
+                <div className="mt-6 grid gap-4 md:grid-cols-3 bg-transparent">
                   <StatCard
                     title="Quotes"
                     value="11,189"
