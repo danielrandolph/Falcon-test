@@ -13,8 +13,8 @@ const jetbrainsMono = JetBrains_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Falcon UI Kit - Design System Documentation",
-  description: "Interactive documentation for the Falcon UI Kit component library",
+  title: "AgVend - Agricultural Vendor Management",
+  description: "Dashboard for managing agricultural vendor relationships, quotes, orders, and clients",
 };
 
 export const viewport: Viewport = {

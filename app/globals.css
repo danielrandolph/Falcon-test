@@ -5,6 +5,7 @@
   --font-sans: "Inter", system-ui, sans-serif;
   --font-mono: "JetBrains Mono", ui-monospace, monospace;
   
+  /* Dark theme for design system pages */
   --color-background: #09090b;
   --color-foreground: #fafafa;
   --color-muted: #27272a;
@@ -17,6 +18,23 @@
   --color-success: #22c55e;
   --color-warning: #f59e0b;
   --color-destructive: #ef4444;
+  
+  /* AgVend brand colors */
+  --color-agvend-primary: #2d3e4f;
+  --color-agvend-accent: #3a99d8;
+  --color-agvend-red: #e54d42;
+  --color-agvend-gray-50: #fafafa;
+  --color-agvend-gray-100: #f7f7f7;
+  --color-agvend-gray-200: #f0f1f2;
+  --color-agvend-gray-300: #dee3e5;
+  --color-agvend-gray-400: #bac5c8;
+  --color-agvend-gray-500: #878e91;
+  --color-agvend-gray-600: #6f7578;
+  --color-agvend-gray-700: #575d5f;
+  --color-agvend-gray-800: #404547;
+  --color-agvend-gray-900: #111111;
+  --color-agvend-blue-light: #b2cce5;
+  --color-agvend-blue: #6b9dc5;
   
   --radius-sm: 0.375rem;
   --radius-md: 0.5rem;

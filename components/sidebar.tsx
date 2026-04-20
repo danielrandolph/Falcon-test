@@ -26,7 +26,8 @@ import {
 } from "lucide-react";
 
 const components = [
-  { name: "Overview", href: "/", icon: Home },
+  { name: "Overview", href: "/design-system", icon: Home },
+  { name: "App Dashboard", href: "/", icon: LayoutGrid },
   { name: "Button", href: "/components/button", icon: MousePointer2 },
   { name: "Checkbox", href: "/components/checkbox", icon: ListChecks },
   { name: "Switch", href: "/components/switch", icon: ToggleLeft },
@@ -70,7 +71,7 @@ export function Sidebar() {
           <ul className="space-y-1">
             {components.map((component) => {
               const Icon = component.icon;
-              const isActive = pathname === component.href;
+              const isActive = pathname === component.href || (component.href === "/design-system" && pathname.startsWith("/components"));
               
               return (
                 <li key={component.name}>
