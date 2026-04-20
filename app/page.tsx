@@ -103,7 +103,7 @@ export default function Dashboard() {
         <main className="p-6">
           {/* Tabs */}
           <div className="mb-6">
-            <Tabs defaultSelectedKey="agronomy">
+            <Tabs defaultSelectedKey="agronomy" className="tw:bg-transparent">
               <TabList className="bg-neutral-100 rounded-lg p-1 w-fit">
                 <Tab id="agronomy">Agronomy</Tab>
                 <Tab id="grain">Grain</Tab>
