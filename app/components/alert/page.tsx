@@ -6,11 +6,12 @@ import { PropsTable } from "@/components/props-table";
 import { Alert } from "../../../falcon-ui-kit/dist/legacy/index.js";
 
 const alertProps = [
-  { name: "variant", type: '"info" | "success" | "warning" | "error"', default: '"info"', description: "The visual variant of the alert" },
-  { name: "title", type: "string", description: "The title of the alert" },
-  { name: "children", type: "ReactNode", description: "The content/message of the alert" },
-  { name: "isDismissable", type: "boolean", default: "false", description: "Whether the alert can be dismissed" },
-  { name: "onDismiss", type: "() => void", description: "Handler called when the alert is dismissed" },
+  { name: "variant", type: '"neutral" | "success" | "warning" | "error"', default: '"neutral"', description: "The visual variant of the alert" },
+  { name: "title", type: "ReactNode", required: true, description: "The title of the alert" },
+  { name: "description", type: "ReactNode", description: "The description/message of the alert" },
+  { name: "size", type: '"regular" | "large"', default: '"regular"', description: "The size of the alert" },
+  { name: "iconName", type: "string", description: "Custom icon name to display" },
+  { name: "buttons", type: "ReactNode", description: "Action buttons to display in the alert" },
 ];
 
 export default function AlertPage() {
@@ -26,8 +27,8 @@ export default function AlertPage() {
       <ComponentPreview
         title="Variants"
         description="Different alert styles for various contexts"
-        code={`<Alert variant="info" title="Information">
-  This is an informational message.
+        code={`<Alert variant="neutral" title="Neutral">
+  This is a neutral message.
 </Alert>
 <Alert variant="success" title="Success">
   Your action was completed successfully.
@@ -40,37 +41,22 @@ export default function AlertPage() {
 </Alert>`}
       >
         <div className="flex w-full flex-col gap-4">
-          <Alert variant="info" title="Information">
-            This is an informational message.
-          </Alert>
-          <Alert variant="success" title="Success">
-            Your action was completed successfully.
-          </Alert>
-          <Alert variant="warning" title="Warning">
-            Please review before proceeding.
-          </Alert>
-          <Alert variant="error" title="Error">
-            Something went wrong. Please try again.
-          </Alert>
+          <Alert variant="neutral" title="Neutral" description="This is a neutral message." />
+          <Alert variant="success" title="Success" description="Your action was completed successfully." />
+          <Alert variant="warning" title="Warning" description="Please review before proceeding." />
+          <Alert variant="error" title="Error" description="Something went wrong. Please try again." />
         </div>
       </ComponentPreview>
 
       <ComponentPreview
-        title="Dismissable"
-        description="Alerts that can be dismissed"
-        code={`<Alert 
-  variant="info" 
-  title="Dismissable Alert" 
-  isDismissable
-  onDismiss={() => console.log("Dismissed")}
->
-  Click the close button to dismiss this alert.
-</Alert>`}
+        title="Sizes"
+        description="Regular and large alert sizes"
+        code={`<Alert size="regular" title="Regular Size" description="This is a regular sized alert." />
+<Alert size="large" title="Large Size" description="This is a large sized alert with more prominent styling." />`}
       >
-        <div className="w-full">
-          <Alert variant="info" title="Dismissable Alert" isDismissable>
-            Click the close button to dismiss this alert.
-          </Alert>
+        <div className="flex w-full flex-col gap-4">
+          <Alert size="regular" title="Regular Size" description="This is a regular sized alert." />
+          <Alert size="large" title="Large Size" description="This is a large sized alert with more prominent styling." />
         </div>
       </ComponentPreview>
 

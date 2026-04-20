@@ -6,8 +6,7 @@ import { PropsTable } from "@/components/props-table";
 import { Button } from "../../../falcon-ui-kit/dist/index.js";
 
 const buttonProps = [
-  { name: "variant", type: '"primary" | "secondary" | "tertiary" | "destructive"', default: '"primary"', description: "The visual style of the button" },
-  { name: "size", type: '"sm" | "md" | "lg"', default: '"md"', description: "The size of the button" },
+  { name: "variant", type: '"primary" | "secondary" | "destructive" | "quiet"', default: '"primary"', description: "The visual style of the button" },
   { name: "isDisabled", type: "boolean", default: "false", description: "Whether the button is disabled" },
   { name: "isPending", type: "boolean", default: "false", description: "Whether the button is in a pending/loading state" },
   { name: "children", type: "ReactNode", description: "The content of the button" },
@@ -30,25 +29,13 @@ export default function ButtonPage() {
         description="Different visual styles for various use cases"
         code={`<Button variant="primary">Primary</Button>
 <Button variant="secondary">Secondary</Button>
-<Button variant="tertiary">Tertiary</Button>
+<Button variant="quiet">Quiet</Button>
 <Button variant="destructive">Destructive</Button>`}
       >
         <Button variant="primary">Primary</Button>
         <Button variant="secondary">Secondary</Button>
-        <Button variant="tertiary">Tertiary</Button>
+        <Button variant="quiet">Quiet</Button>
         <Button variant="destructive">Destructive</Button>
-      </ComponentPreview>
-
-      <ComponentPreview
-        title="Sizes"
-        description="Three sizes to fit different contexts"
-        code={`<Button size="sm">Small</Button>
-<Button size="md">Medium</Button>
-<Button size="lg">Large</Button>`}
-      >
-        <Button size="sm">Small</Button>
-        <Button size="md">Medium</Button>
-        <Button size="lg">Large</Button>
       </ComponentPreview>
 
       <ComponentPreview
