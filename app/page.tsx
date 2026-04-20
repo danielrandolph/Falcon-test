@@ -57,7 +57,7 @@ const performanceLeaderboard = [
     rank: 5,
     name: "Diana Sales 2 (Agronomy) $710",
     value: "$710",
-    details: ["$700sold", "$0 booked"],
+    details: ["$700 sold", "$0 booked"],
   },
 ];
 

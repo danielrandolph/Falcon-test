@@ -32,7 +32,7 @@ export function SpotlightSection({ items }: SpotlightSectionProps) {
               <Link
                 href={item.href}
                 variant="primary"
-                className="text-lg font-medium no-underline hover:underline"
+                className="text-lg font-medium no-underline"
               >
                 {item.name}
               </Link>
