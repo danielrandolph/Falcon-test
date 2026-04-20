@@ -49,8 +49,5 @@
     "tailwindcss-animate": "^1.0.7",
     "tailwindcss-react-aria-components": "^2.0.1"
   },
-  "scripts": {
-    "dev": "rslib build --watch",
-    "build": "rslib build"
-  }
+  "scripts": {}
 }
