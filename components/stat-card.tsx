@@ -1,7 +1,6 @@
 "use client";
 
 import { LucideIcon } from "lucide-react";
-import { Badge } from "../falcon-ui-kit/dist/legacy/index.js";
 
 interface StatCardProps {
   title: string;
@@ -12,19 +11,25 @@ interface StatCardProps {
 
 export function StatCard({ title, value, icon: Icon, badges }: StatCardProps) {
   return (
-    <div className="rounded-lg border border-neutral-200 bg-white p-4">
-      <div className="mb-2 flex items-center gap-2 text-sm text-neutral-500">
-        <Icon className="h-4 w-4" />
-        <span>{title}</span>
+    <div className="rounded-xl bg-white p-5 shadow-sm">
+      {/* Header with icon and title */}
+      <div className="mb-3 flex items-center gap-2">
+        <Icon className="h-5 w-5 text-sky-500" strokeWidth={1.5} />
+        <span className="text-sm font-medium text-neutral-600">{title}</span>
       </div>
-      <div className="mb-3 text-3xl font-semibold text-neutral-900">{value}</div>
+      
+      {/* Large value */}
+      <div className="mb-4 text-4xl font-bold text-neutral-900">{value}</div>
+      
+      {/* Badge pills */}
       <div className="flex flex-wrap gap-2">
         {badges.map((badge, index) => (
-          <Badge key={index} variant="info" size="small">
-            <span className="text-xs font-medium text-neutral-700">
-              {badge.value} {badge.label}
-            </span>
-          </Badge>
+          <span
+            key={index}
+            className="inline-flex items-center rounded-full border border-neutral-200 bg-white px-3 py-1.5 text-xs font-medium text-neutral-600"
+          >
+            {badge.value} {badge.label}
+          </span>
         ))}
       </div>
     </div>
