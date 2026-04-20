@@ -3,7 +3,7 @@
 import { DocsLayout } from "@/components/docs-layout";
 import { ComponentPreview } from "@/components/component-preview";
 import { PropsTable } from "@/components/props-table";
-import { Tabs, TabList, Tab, TabPanel } from "../../../package/dist/index.js";
+import { Tabs, TabList, Tab, TabPanel } from "../../../falcon-ui-kit/dist/index.js";
 
 const tabsProps = [
   { name: "selectedKey", type: "Key", description: "The currently selected tab key (controlled)" },

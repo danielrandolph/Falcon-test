@@ -3,7 +3,7 @@
 import { DocsLayout } from "@/components/docs-layout";
 import { ComponentPreview } from "@/components/component-preview";
 import { PropsTable } from "@/components/props-table";
-import { Alert } from "../../../package/dist/legacy/index.js";
+import { Alert } from "../../../falcon-ui-kit/dist/legacy/index.js";
 
 const alertProps = [
   { name: "variant", type: '"info" | "success" | "warning" | "error"', default: '"info"', description: "The visual variant of the alert" },

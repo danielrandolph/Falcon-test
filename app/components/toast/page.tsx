@@ -3,7 +3,7 @@
 import { DocsLayout } from "@/components/docs-layout";
 import { ComponentPreview } from "@/components/component-preview";
 import { PropsTable } from "@/components/props-table";
-import { ToastRegion, ToastQueue, Button } from "../../../package/dist/index.js";
+import { ToastRegion, ToastQueue, Button } from "../../../falcon-ui-kit/dist/index.js";
 
 const toastQueueProps = [
   { name: "maxVisibleToasts", type: "number", default: "5", description: "Maximum number of visible toasts" },

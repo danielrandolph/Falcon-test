@@ -3,7 +3,7 @@
 import { DocsLayout } from "@/components/docs-layout";
 import { ComponentPreview } from "@/components/component-preview";
 import { PropsTable } from "@/components/props-table";
-import { Button } from "../../../package/dist/index.js";
+import { Button } from "../../../falcon-ui-kit/dist/index.js";
 
 const buttonProps = [
   { name: "variant", type: '"primary" | "secondary" | "tertiary" | "destructive"', default: '"primary"', description: "The visual style of the button" },

@@ -3,7 +3,7 @@
 import { DocsLayout } from "@/components/docs-layout";
 import { ComponentPreview } from "@/components/component-preview";
 import { PropsTable } from "@/components/props-table";
-import { Calendar, DatePicker, DateRangePicker } from "../../../package/dist/index.js";
+import { Calendar, DatePicker, DateRangePicker } from "../../../falcon-ui-kit/dist/index.js";
 
 const calendarProps = [
   { name: "value", type: "DateValue", description: "The currently selected date (controlled)" },

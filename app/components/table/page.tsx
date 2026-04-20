@@ -10,7 +10,7 @@ import {
   Row, 
   Column, 
   Cell 
-} from "../../../package/dist/index.js";
+} from "../../../falcon-ui-kit/dist/index.js";
 
 const tableProps = [
   { name: "aria-label", type: "string", description: "Accessibility label for the table" },

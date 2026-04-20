@@ -3,7 +3,7 @@
 import { DocsLayout } from "@/components/docs-layout";
 import { ComponentPreview } from "@/components/component-preview";
 import { PropsTable } from "@/components/props-table";
-import { ProgressBar, Meter } from "../../../package/dist/index.js";
+import { ProgressBar, Meter } from "../../../falcon-ui-kit/dist/index.js";
 
 const progressProps = [
   { name: "label", type: "ReactNode", description: "The content to display as the label" },

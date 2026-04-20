@@ -3,7 +3,7 @@
 import { DocsLayout } from "@/components/docs-layout";
 import { ComponentPreview } from "@/components/component-preview";
 import { PropsTable } from "@/components/props-table";
-import { Select, SelectItem, SelectSection } from "../../../package/dist/index.js";
+import { Select, SelectItem, SelectSection } from "../../../falcon-ui-kit/dist/index.js";
 
 const selectProps = [
   { name: "label", type: "string", description: "The label for the select" },

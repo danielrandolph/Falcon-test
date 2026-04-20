@@ -3,7 +3,7 @@
 import { DocsLayout } from "@/components/docs-layout";
 import { ComponentPreview } from "@/components/component-preview";
 import { PropsTable } from "@/components/props-table";
-import { Checkbox, CheckboxGroup } from "../../../package/dist/index.js";
+import { Checkbox, CheckboxGroup } from "../../../falcon-ui-kit/dist/index.js";
 
 const checkboxProps = [
   { name: "isSelected", type: "boolean", description: "Whether the checkbox is selected (controlled)" },

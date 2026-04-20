@@ -3,7 +3,7 @@
 import { DocsLayout } from "@/components/docs-layout";
 import { ComponentPreview } from "@/components/component-preview";
 import { PropsTable } from "@/components/props-table";
-import { DialogTrigger, Dialog, AlertDialog, Button } from "../../../package/dist/index.js";
+import { DialogTrigger, Dialog, AlertDialog, Button } from "../../../falcon-ui-kit/dist/index.js";
 
 const dialogProps = [
   { name: "children", type: "ReactNode | (opts: DialogRenderProps) => ReactNode", description: "The content of the dialog" },

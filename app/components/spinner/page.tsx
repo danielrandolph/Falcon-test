@@ -3,7 +3,7 @@
 import { DocsLayout } from "@/components/docs-layout";
 import { ComponentPreview } from "@/components/component-preview";
 import { PropsTable } from "@/components/props-table";
-import { Loading } from "../../../package/dist/legacy/index.js";
+import { Loading } from "../../../falcon-ui-kit/dist/legacy/index.js";
 
 const loadingProps = [
   { name: "size", type: '"small" | "medium" | "large"', default: '"medium"', description: "The size of the loading indicator" },

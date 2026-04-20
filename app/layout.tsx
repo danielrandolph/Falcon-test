@@ -13,7 +13,7 @@ const jetbrainsMono = JetBrains_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Falcon UI - Design System",
+  title: "Falcon UI Kit - Design System Documentation",
   description: "Interactive documentation for the Falcon UI Kit component library",
 };
 

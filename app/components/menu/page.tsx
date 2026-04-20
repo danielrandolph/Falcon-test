@@ -3,7 +3,7 @@
 import { DocsLayout } from "@/components/docs-layout";
 import { ComponentPreview } from "@/components/component-preview";
 import { PropsTable } from "@/components/props-table";
-import { MenuTrigger, Menu, MenuItem, MenuSection, Button, SubmenuTrigger } from "../../../package/dist/index.js";
+import { MenuTrigger, Menu, MenuItem, MenuSection, Button, SubmenuTrigger } from "../../../falcon-ui-kit/dist/index.js";
 
 const menuProps = [
   { name: "children", type: "ReactNode", description: "The menu items" },

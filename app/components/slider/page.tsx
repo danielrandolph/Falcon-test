@@ -3,7 +3,7 @@
 import { DocsLayout } from "@/components/docs-layout";
 import { ComponentPreview } from "@/components/component-preview";
 import { PropsTable } from "@/components/props-table";
-import { Slider } from "../../../package/dist/index.js";
+import { Slider } from "../../../falcon-ui-kit/dist/index.js";
 
 const sliderProps = [
   { name: "label", type: "string", description: "The label for the slider" },

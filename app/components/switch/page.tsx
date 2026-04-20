@@ -3,7 +3,7 @@
 import { DocsLayout } from "@/components/docs-layout";
 import { ComponentPreview } from "@/components/component-preview";
 import { PropsTable } from "@/components/props-table";
-import { Switch } from "../../../package/dist/index.js";
+import { Switch } from "../../../falcon-ui-kit/dist/index.js";
 
 const switchProps = [
   { name: "isSelected", type: "boolean", description: "Whether the switch is on (controlled)" },

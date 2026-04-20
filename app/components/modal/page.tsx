@@ -3,7 +3,7 @@
 import { DocsLayout } from "@/components/docs-layout";
 import { ComponentPreview } from "@/components/component-preview";
 import { PropsTable } from "@/components/props-table";
-import { DialogTrigger, Modal, Dialog, Button } from "../../../package/dist/index.js";
+import { DialogTrigger, Modal, Dialog, Button } from "../../../falcon-ui-kit/dist/index.js";
 
 const modalProps = [
   { name: "children", type: "ReactNode", description: "The content of the modal" },

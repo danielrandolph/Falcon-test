@@ -3,7 +3,7 @@
 import { DocsLayout } from "@/components/docs-layout";
 import { ComponentPreview } from "@/components/component-preview";
 import { PropsTable } from "@/components/props-table";
-import { TextField, TextArea } from "../../../package/dist/index.js";
+import { TextField, TextArea } from "../../../falcon-ui-kit/dist/index.js";
 
 const textFieldProps = [
   { name: "label", type: "string", description: "The label for the text field" },
