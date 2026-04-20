@@ -1,7 +1,7 @@
 "use client";
 
 import { ArrowRight, Search, FileText } from "lucide-react";
-import { Link, Button } from "../falcon-ui-kit/dist/index.js";
+import { Link, Button, Separator } from "../falcon-ui-kit/dist/index.js";
 
 interface SpotlightItem {
   name: string;
@@ -15,31 +15,42 @@ interface SpotlightSectionProps {
 
 export function SpotlightSection({ items }: SpotlightSectionProps) {
   return (
-    <div className="rounded-lg border border-neutral-200 bg-white p-4">
-      <div className="mb-4 flex items-center gap-2">
-        <h3 className="font-semibold text-neutral-900">Spotlight</h3>
-        <ArrowRight className="h-4 w-4 text-neutral-500" />
+    <div className="rounded-lg bg-white p-5">
+      {/* Header */}
+      <div className="mb-2 flex items-center gap-3">
+        <h3 className="text-lg font-semibold text-neutral-900">Spotlight</h3>
+        <Button variant="quiet" className="h-8 w-8 p-0">
+          <ArrowRight className="h-5 w-5 text-neutral-700" />
+        </Button>
       </div>
-      <div className="space-y-1">
+
+      {/* List */}
+      <div className="flex flex-col">
         {items.map((item, index) => (
-          <div
-            key={index}
-            className="flex items-center justify-between rounded-lg px-2 py-2 hover:bg-neutral-50 transition-colors"
-          >
-            <Link href={item.href} variant="primary" className="text-sm">
-              {item.name}
-            </Link>
-            <div className="flex items-center gap-1">
-              <Button variant="quiet" className="h-7 w-7 px-0">
-                <Search className="h-4 w-4" />
-              </Button>
-              <Button variant="quiet" className="h-7 w-7 px-0">
-                <FileText className="h-4 w-4" />
-              </Button>
-              <span className="flex h-6 min-w-6 items-center justify-center rounded-full bg-neutral-100 px-2 text-xs font-medium text-neutral-700">
-                +{item.count}
-              </span>
+          <div key={index}>
+            <div className="flex items-center justify-between py-4">
+              <Link
+                href={item.href}
+                variant="primary"
+                className="text-lg font-medium no-underline hover:underline"
+              >
+                {item.name}
+              </Link>
+              <div className="flex items-center gap-2">
+                <Button variant="quiet" className="h-9 w-9 p-0">
+                  <Search className="h-5 w-5 text-neutral-400" strokeWidth={1.5} />
+                </Button>
+                <Button variant="quiet" className="h-9 w-9 p-0">
+                  <FileText className="h-5 w-5 text-neutral-400" strokeWidth={1.5} />
+                </Button>
+                <span className="flex h-7 min-w-[2rem] items-center justify-center rounded-full border border-neutral-200 bg-white px-2 text-sm font-medium text-neutral-600">
+                  +{item.count}
+                </span>
+              </div>
             </div>
+            {index < items.length - 1 && (
+              <Separator className="bg-neutral-200" />
+            )}
           </div>
         ))}
       </div>
