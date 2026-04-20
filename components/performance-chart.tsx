@@ -16,32 +16,32 @@ export function PerformanceChart() {
   const maxValue = Math.max(...chartData.map((d) => d.value));
 
   return (
-    <div className="tw:rounded-lg tw:border tw:border-neutral-200 tw:bg-white tw:p-4 tw:font-sans">
-      <div className="tw:mb-4 tw:flex tw:items-center tw:justify-between">
-        <div className="tw:flex tw:items-center tw:gap-2">
-          <h3 className="tw:font-semibold tw:text-neutral-900">My Performance</h3>
-          <ArrowRight className="tw:h-4 tw:w-4 tw:text-neutral-500" />
+    <div className="rounded-lg border border-neutral-200 bg-white p-4">
+      <div className="mb-4 flex items-center justify-between">
+        <div className="flex items-center gap-2">
+          <h3 className="font-semibold text-neutral-900">My Performance</h3>
+          <ArrowRight className="h-4 w-4 text-neutral-500" />
         </div>
         <ToggleButtonGroup selectionMode="single" defaultSelectedKeys={["crop"]}>
-          <ToggleButton id="crop" className="tw:h-7 tw:text-xs tw:px-3">
+          <ToggleButton id="crop" className="h-7 text-xs px-3">
             Crop Year
           </ToggleButton>
-          <ToggleButton id="clients" className="tw:h-7 tw:text-xs tw:px-3">
+          <ToggleButton id="clients" className="h-7 text-xs px-3">
             Clients
           </ToggleButton>
         </ToggleButtonGroup>
       </div>
 
       {/* Chart */}
-      <div className="tw:mt-6">
-        <div className="tw:flex tw:h-40 tw:items-end tw:justify-between tw:gap-2">
+      <div className="mt-6">
+        <div className="flex h-40 items-end justify-between gap-2">
           {chartData.map((data, index) => (
-            <div key={index} className="tw:flex tw:flex-1 tw:flex-col tw:items-center tw:gap-2">
+            <div key={index} className="flex flex-1 flex-col items-center gap-2">
               <div
-                className="tw:w-full tw:max-w-10 tw:rounded-t tw:bg-blue-200 tw:transition-all tw:hover:bg-blue-400"
+                className="w-full max-w-10 rounded-t bg-blue-200 transition-all hover:bg-blue-400"
                 style={{ height: `${(data.value / maxValue) * 100}%` }}
               />
-              <span className="tw:text-xs tw:text-neutral-500">{data.month}</span>
+              <span className="text-xs text-neutral-500">{data.month}</span>
             </div>
           ))}
         </div>

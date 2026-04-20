@@ -96,22 +96,22 @@ const actionsLeaderboard = [
 
 export default function Dashboard() {
   return (
-    <div className="tw:min-h-screen tw:bg-white tw:font-sans">
+    <div className="min-h-screen bg-white">
       <AppSidebar />
-      <div className="tw:pl-56">
+      <div className="pl-56">
         <DashboardHeader />
-        <main className="tw:p-6">
+        <main className="p-6">
           {/* Tabs */}
-          <div className="tw:mb-6">
+          <div className="mb-6">
             <Tabs defaultSelectedKey="agronomy">
-              <TabList className="tw:bg-neutral-100 tw:rounded-lg tw:p-1 tw:w-fit">
+              <TabList className="bg-neutral-100 rounded-lg p-1 w-fit">
                 <Tab id="agronomy">Agronomy</Tab>
                 <Tab id="grain">Grain</Tab>
                 <Tab id="energy">Energy</Tab>
               </TabList>
-              <TabPanel id="agronomy" className="tw:p-0">
+              <TabPanel id="agronomy" className="p-0">
                 {/* Stats Row */}
-                <div className="tw:mt-6 tw:grid tw:gap-4 md:tw:grid-cols-3">
+                <div className="mt-6 grid gap-4 md:grid-cols-3">
                   <StatCard
                     title="Quotes"
                     value="11,189"
@@ -142,17 +142,17 @@ export default function Dashboard() {
                 </div>
 
                 {/* My Reports Collapsible */}
-                <div className="tw:mt-6">
+                <div className="mt-6">
                   <DisclosureGroup>
-                    <Disclosure id="reports" className="tw:rounded-lg tw:border tw:border-neutral-200 tw:bg-white">
-                      <div className="tw:flex tw:items-center tw:justify-between tw:pr-2">
+                    <Disclosure id="reports" className="rounded-lg border border-neutral-200 bg-white">
+                      <div className="flex items-center justify-between pr-2">
                         <DisclosureHeader>My Reports</DisclosureHeader>
-                        <Button variant="quiet" className="tw:h-8 tw:w-8 tw:px-0">
-                          <Settings className="tw:h-4 tw:w-4" />
+                        <Button variant="quiet" className="h-8 w-8 px-0">
+                          <Settings className="h-4 w-4" />
                         </Button>
                       </div>
                       <DisclosurePanel>
-                        <div className="tw:text-sm tw:text-neutral-500">
+                        <div className="text-sm text-neutral-500">
                           Your saved reports will appear here.
                         </div>
                       </DisclosurePanel>
@@ -161,13 +161,13 @@ export default function Dashboard() {
                 </div>
 
                 {/* Spotlight & Performance Row */}
-                <div className="tw:mt-6 tw:grid tw:gap-4 lg:tw:grid-cols-2">
+                <div className="mt-6 grid gap-4 lg:grid-cols-2">
                   <SpotlightSection items={spotlightItems} />
                   <PerformanceChart />
                 </div>
 
                 {/* Leaderboards Row */}
-                <div className="tw:mt-6 tw:grid tw:gap-4 lg:tw:grid-cols-2">
+                <div className="mt-6 grid gap-4 lg:grid-cols-2">
                   <Leaderboard
                     title="Leaderboard - Performance"
                     period="Current Crop Year"
@@ -180,13 +180,13 @@ export default function Dashboard() {
                   />
                 </div>
               </TabPanel>
-              <TabPanel id="grain" className="tw:p-0">
-                <div className="tw:mt-6 tw:text-center tw:py-12 tw:text-neutral-500">
+              <TabPanel id="grain" className="p-0">
+                <div className="mt-6 text-center py-12 text-neutral-500">
                   Grain dashboard content coming soon...
                 </div>
               </TabPanel>
-              <TabPanel id="energy" className="tw:p-0">
-                <div className="tw:mt-6 tw:text-center tw:py-12 tw:text-neutral-500">
+              <TabPanel id="energy" className="p-0">
+                <div className="mt-6 text-center py-12 text-neutral-500">
                   Energy dashboard content coming soon...
                 </div>
               </TabPanel>

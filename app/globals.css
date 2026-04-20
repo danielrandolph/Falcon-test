@@ -41,14 +41,7 @@
   --radius-lg: 0.75rem;
 }
 
-* {
-  border-color: var(--color-border);
-}
-
-body {
-  background-color: var(--color-background);
-  color: var(--color-foreground);
-}
+/* These apply globally but can be overridden by page-specific classes */
 
 /* Code block styling */
 pre {

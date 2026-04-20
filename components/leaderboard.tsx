@@ -18,35 +18,35 @@ interface LeaderboardProps {
 
 export function Leaderboard({ title, period, items }: LeaderboardProps) {
   return (
-    <div className="tw:rounded-lg tw:border tw:border-neutral-200 tw:bg-white tw:p-4 tw:font-sans">
-      <div className="tw:mb-4 tw:flex tw:items-center tw:justify-between">
-        <div className="tw:flex tw:items-center tw:gap-2">
-          <h3 className="tw:font-semibold tw:text-neutral-900">{title}</h3>
-          <ArrowRight className="tw:h-4 tw:w-4 tw:text-neutral-500" />
+    <div className="rounded-lg border border-neutral-200 bg-white p-4">
+      <div className="mb-4 flex items-center justify-between">
+        <div className="flex items-center gap-2">
+          <h3 className="font-semibold text-neutral-900">{title}</h3>
+          <ArrowRight className="h-4 w-4 text-neutral-500" />
         </div>
-        <span className="tw:text-xs tw:text-neutral-500">{period}</span>
+        <span className="text-xs text-neutral-500">{period}</span>
       </div>
 
-      <div className="tw:space-y-3">
+      <div className="space-y-3">
         {items.map((item, index) => (
           <div key={index}>
-            <div className="tw:flex tw:items-start tw:gap-3">
-              <div className="tw:flex tw:h-6 tw:w-6 tw:shrink-0 tw:items-center tw:justify-center tw:rounded-full tw:bg-neutral-100 tw:text-xs tw:font-semibold tw:text-neutral-700">
+            <div className="flex items-start gap-3">
+              <div className="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-neutral-100 text-xs font-semibold text-neutral-700">
                 {item.rank}
               </div>
-              <div className="tw:min-w-0 tw:flex-1">
-                <div className="tw:font-medium tw:text-neutral-900 tw:text-sm">{item.name}</div>
-                <div className="tw:flex tw:flex-wrap tw:gap-1.5 tw:text-xs tw:text-neutral-500">
+              <div className="min-w-0 flex-1">
+                <div className="font-medium text-neutral-900 text-sm">{item.name}</div>
+                <div className="flex flex-wrap gap-1.5 text-xs text-neutral-500">
                   {item.details.map((detail, i) => (
                     <span key={i}>
                       {detail}
-                      {i < item.details.length - 1 && <span className="tw:ml-1.5">|</span>}
+                      {i < item.details.length - 1 && <span className="ml-1.5">|</span>}
                     </span>
                   ))}
                 </div>
               </div>
             </div>
-            {index < items.length - 1 && <Separator className="tw:mt-3" />}
+            {index < items.length - 1 && <Separator className="mt-3" />}
           </div>
         ))}
       </div>

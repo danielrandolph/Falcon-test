@@ -6,7 +6,7 @@ interface DocsLayoutProps {
 
 export function DocsLayout({ children }: DocsLayoutProps) {
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen bg-background text-foreground">
       <Sidebar />
       <main className="pl-64">
         <div className="mx-auto max-w-4xl px-8 py-12">
