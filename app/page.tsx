@@ -1,6 +1,7 @@
 "use client";
 
 import { AppSidebar } from "@/components/app-sidebar";
+import { SidebarProvider, useSidebar } from "@/components/sidebar-context";
 import { DashboardHeader } from "@/components/dashboard-header";
 import { StatCard } from "@/components/stat-card";
 import { SpotlightSection } from "@/components/spotlight-section";
@@ -57,7 +58,7 @@ const performanceLeaderboard = [
     rank: 5,
     name: "Diana Sales 2 (Agronomy) $710",
     value: "$710",
-    details: ["$700sold", "$0 booked"],
+    details: ["$700 sold", "$0 booked"],
   },
 ];
 
@@ -94,20 +95,24 @@ const actionsLeaderboard = [
   },
 ];
 
-export default function Dashboard() {
+function DashboardContent() {
+  const { collapsed } = useSidebar();
   return (
     <div className="min-h-screen bg-gray-50">
       <AppSidebar />
-      <div className="pl-56">
+      <div
+        className="transition-all duration-200"
+        style={{ paddingLeft: collapsed ? "3.5rem" : "14rem" }}
+      >
         <DashboardHeader />
         <main className="p-6">
           {/* Tabs */}
           <div className="mb-6">
-            <Tabs defaultSelectedKey="agronomy">
-              <TabList className="bg-neutral-100 rounded-lg p-1 w-fit">
-                <Tab id="agronomy">Agronomy</Tab>
-                <Tab id="grain">Grain</Tab>
-                <Tab id="energy">Energy</Tab>
+            <Tabs defaultSelectedKey="agronomy" className="tw:bg-transparent">
+              <TabList className="inline-flex rounded-full bg-neutral-100 p-1">
+                <Tab id="agronomy" className="tw:text-neutral-700">Agronomy</Tab>
+                <Tab id="grain" className="tw:text-neutral-700">Grain</Tab>
+                <Tab id="energy" className="tw:text-neutral-700">Energy</Tab>
               </TabList>
               <TabPanel id="agronomy" className="p-0">
                 {/* Stats Row */}
@@ -195,5 +200,13 @@ export default function Dashboard() {
         </main>
       </div>
     </div>
+  );
+}
+
+export default function Dashboard() {
+  return (
+    <SidebarProvider>
+      <DashboardContent />
+    </SidebarProvider>
   );
 }

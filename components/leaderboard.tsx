@@ -18,7 +18,7 @@ interface LeaderboardProps {
 
 export function Leaderboard({ title, period, items }: LeaderboardProps) {
   return (
-    <div className="rounded-lg border border-neutral-200 bg-white p-4">
+    <div className="rounded-xl border border-neutral-200 bg-white p-5">
       <div className="mb-4 flex items-center justify-between">
         <div className="flex items-center gap-2">
           <h3 className="font-semibold text-neutral-900">{title}</h3>
