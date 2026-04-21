@@ -125,7 +125,7 @@ export function AppSidebar() {
               <ul className="space-y-0.5">
                 {section.items.map((item) => {
                   const Icon = item.icon;
-                  const isActive = pathname === item.href || item.isActive;
+                  const isActive = pathname === item.href || ('isActive' in item && item.isActive);
 
                   const linkEl = (
                     <Link
