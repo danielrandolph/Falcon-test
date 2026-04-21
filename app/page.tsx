@@ -109,10 +109,10 @@ function DashboardContent() {
           {/* Tabs */}
           <div className="mb-6">
             <Tabs defaultSelectedKey="agronomy" className="tw:bg-transparent">
-              <TabList className="bg-neutral-100 rounded-lg p-1 w-fit">
-                <Tab id="agronomy">Agronomy</Tab>
-                <Tab id="grain">Grain</Tab>
-                <Tab id="energy">Energy</Tab>
+              <TabList className="inline-flex rounded-full bg-neutral-100 p-1">
+                <Tab id="agronomy" className="tw:text-neutral-700">Agronomy</Tab>
+                <Tab id="grain" className="tw:text-neutral-700">Grain</Tab>
+                <Tab id="energy" className="tw:text-neutral-700">Energy</Tab>
               </TabList>
               <TabPanel id="agronomy" className="p-0">
                 {/* Stats Row */}
